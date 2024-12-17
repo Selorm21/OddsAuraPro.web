@@ -1,0 +1,33 @@
+.statistics {
+  display: flex;                  /* Enables flexbox layout */
+  justify-content: space-between; /* Distributes space evenly between items */
+  align-items: center;            /* Vertically centers the items */
+  padding: 50px;
+  
+  position: relative;
+  background-color: black;
+  background-image: url(../images/banner-2.jpg);
+  background-size: cover;
+  background-position: center;
+  color: greenyellow;
+  text-align: center;
+  height: 150px;
+}
+
+/* Create a dark overlay using ::before */
+.statistics::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Adjust the opacity (0.5 for 50% darkness) */
+  z-index: 1;                     /* Place the overlay above the background */
+}
+
+/* Ensure the content appears above the overlay */
+.statistics > * {
+  position: relative;
+  z-index: 2;
+}

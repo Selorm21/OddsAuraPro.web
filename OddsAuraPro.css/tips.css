@@ -1,0 +1,16 @@
+ 
+ .tips {
+  
+  background-color:#FFD700 ;
+  text-align: center;
+  font-weight: 500;
+  margin-top: 60px;
+  color: white;
+  margin-right: 20px;
+  border-radius: 5px;
+  width: 950px;
+  height: 40px;
+  box-shadow: 6px 6px 6px gray;
+  padding-top: 15px;
+  cursor: pointer;
+ }

@@ -1,0 +1,12 @@
+.paymentMethod {
+  width: 100%;
+  height: 40px;
+  display: block;
+  background: #1c1a1a;
+  text-align: center;
+}
+
+.paymentimage {
+  height: 20px;
+  margin-top: 10px;
+}

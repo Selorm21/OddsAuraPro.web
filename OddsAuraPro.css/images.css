@@ -1,0 +1,95 @@
+
+/* .motivation {
+height: 500px;
+width: 450px;
+} */
+
+
+
+.hero-section {
+  display: flex;
+  margin: 2rem 0px;
+
+}
+
+ 
+/* Container for the slideshow */
+.slideshow-container {
+  position: relative;
+  width: 50%;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Style for each slide */
+.slide {
+  display: none;
+  width: 100%;
+  background: red;
+  
+}
+
+/* Image styling */
+.slide img {
+  width: 100%;
+}
+
+/* Navigation arrows (previous and next) */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+  user-select: none;
+  border-radius: 3px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Hover effect for arrows */
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Slide fade effect */
+.fade {
+  animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+
+/* Dots for slide indicators */
+.dots-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #717171;
+}
+
+
+

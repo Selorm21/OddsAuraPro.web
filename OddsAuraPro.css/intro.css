@@ -1,0 +1,29 @@
+
+.intro {
+  display:inline-block;
+  background-color:#202833 ;
+  color:#FFD700 ;
+  position: relative;
+  /* width: 760px; */
+  /* margin-top: 20px; */
+  border-radius: 15px; 
+  margin-left: 10px;
+  box-shadow: 12px 12px 12px gray;
+  height: 20%;
+}
+
+.h_1 {
+  text-align: center;
+  color:#FFD700 ;
+}
+
+.h_2{
+text-align: center;
+color:#FFD700 ;
+}
+
+.introParagraph {
+  width: 720px; ;
+  text-align: center;
+  margin-left: 15px;
+}

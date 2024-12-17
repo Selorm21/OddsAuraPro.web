@@ -1,0 +1,31 @@
+
+.copyright {
+  display: flex;                /* Enables flexbox layout */
+  justify-content: space-between; /* Distributes space evenly between items */
+  align-items: center;          /* Vertically centers the items */
+  padding: 30px;
+  background: #0f0f0f;
+  color: #f8f9fa;
+  font-family: 'Pacifico', cursive;
+
+
+}
+
+.Powered {
+  margin-left: -150px;
+}
+
+.terms {
+  cursor: pointer;
+}
+
+.terms:hover {
+color: #FFD700;
+text-decoration: underline; /* Underlines the text on hover */
+}
+
+.terms:active {
+  transform: scale(1.1); /* Zoom in the text when clicked */
+  transition: transform 0.1s ease-in-out;
+  color: #f8f9fa;
+}

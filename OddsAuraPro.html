@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OddsAuraPro</title>
+  </head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+
+  <link rel="stylesheet" href="OddsAuraPro.css/body.css" />
+
+  <link rel="stylesheet" href="OddsAuraPro.css/header.css" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+    rel="stylesheet"
+  />
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/uikit@3.21.16/dist/css/uikit.min.css"
+  />
+
+  <!-- UIkit JS -->
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.16/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.16/dist/js/uikit-icons.min.js"></script>
+
+  <link rel="stylesheet" href="OddsAuraPro.css/images.css" />
+
+  <link rel="stylesheet" href="OddsAuraPro.css/intro.css" />
+
+  <link rel="stylesheet" href="OddsAuraPro.css/miniMenu.css" />
+
+  <link rel="stylesheet" href="OddsAuraPro.css/tips.css" />
+
+  <link rel="stylesheet" href="OddsAuraPro.css/betlist.css" />
+
+  <link rel="stylesheet" href="OddsAuraPro.css/managerlink.css" />
+
+  <link rel="stylesheet" href="OddsAuraPro.css/statistics.css" />
+
+  <link rel="stylesheet" href="OddsAuraPro.css/contact.css" />
+
+  <link rel="stylesheet" href="OddsAuraPro.css/paymentMethod.css" />
+
+  <link rel="stylesheet" href="OddsAuraPro.css/copyright.css" />
+
+  <script
+    src="https://kit.fontawesome.com/a076d05399.js"
+    crossorigin="anonymous"
+  ></script>
+
+  <body class="body">
+    <div class="header">
+      <div class="leftside">
+        <div class="allmenubar">
+          <div class="menubar"></div>
+          <div class="menubar"></div>
+          <div class="menubar"></div>
+        </div>
+        <div class="homebuttonA">
+          <button class="homebutton"><i class="fa fa-home"></i> Home</button>
+        </div>
+      </div>
+
+      <div class="sitenameandsearchbar">
+        <div class="sitename">
+          <span class="odds">Odds</span><span class="aura">Aura</span
+          ><span class="pro">Pro</span>
+        </div>
+        <div class="search-bar">
+          <input type="text" class="searchbar" placeholder="need an assist?" />
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button class="about">ABOUT US</button>
+        <button class="vip">VIP PAGE</button>
+        <button class="contact">CONTACT US</button>
+        <button class="academy">BETTING ACADEMY</button>
+      </div>
+    </div>
+
+    <div class="hero-section">
+      <div class="slideshow-container">
+        <div class="slide fade">
+          <img src="images/messi.jp.jpg" alt="Image 1" />
+        </div>
+
+        <div class="slide fade">
+          <img src="images/ronaldo.png" alt="Image 2" />
+        </div>
+
+        <div class="slide fade">
+          <img src="images/oddsaurapic.jpg" alt="Image 3" />
+        </div>
+
+        <!-- Navigation arrows -->
+        <a class="prev" onclick="changeSlide(-1)">❮</a>
+        <a class="next" onclick="changeSlide(1)">❯</a>
+
+        <!-- Dots for slide indicators -->
+        <div class="dots-container">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+      </div>
+
+      <div class="intro">
+        <h1 class="h_1">Betting Odds Formats</h1>
+        <h2 class="h_2">Free bets, bonus offers and reviews</h2>
+        <p class="introParagraph">
+          Expert tips on sports betting with forecasts, predictions, analyses
+          with statistics, line-ups and odds. Exclusive vouchers and bonus
+          offers from over 100 of the best bookmakers. Tips and current odds for
+          soccer, football, basketball, tennis, ice hockey and more. Betting
+          tips for today and tomorrow with forecasts for many betting markets
+          and recommendations.
+        </p>
+      </div>
+    </div>
+    <div class="predictionSection">
+      <div class="miniMenu">
+        <div class="miniMenuCaption">OddsAuraPro BETTING TIPS</div>
+
+        <p class="tips">TIPS (click to view) <span class="arrow">▼</span></p>
+
+        <div class="betContainer">
+          <h1>Today's Bet Predictions</h1>
+          <table class="uk-table uk-table-hover uk-table-divider">
+            <thead>
+              <tr>
+                <th>Table Heading</th>
+                <th>Table Heading</th>
+                <th>Table Heading</th>
+                <th>Table Heading</th>
+                <th>Table Heading</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>
+                  <input
+                    type="checkbox"
+                    class="readonly-checkbox"
+                    name="bet_checkbox"
+                    value="1"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>
+                  <input
+                    type="checkbox"
+                    class="readonly-checkbox"
+                    name="bet_checkbox"
+                    value="1"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>
+                  <input
+                    type="checkbox"
+                    class="readonly-checkbox"
+                    name="bet_checkbox"
+                    value="1"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="tips">TIPS (click to view) <span class="arrow">▼</span></p>
+
+        <div class="betContainer">
+          <h1>Today's Bet Predictions</h1>
+          <table class="uk-table uk-table-hover uk-table-divider">
+            <thead>
+              <tr>
+                <th>Table Heading</th>
+                <th>Table Heading</th>
+                <th>Table Heading</th>
+                <th>Table Heading</th>
+                <th>Table Heading</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>
+                  <input
+                    type="checkbox"
+                    class="readonly-checkbox"
+                    name="bet_checkbox"
+                    value="1"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>
+                  <input
+                    type="checkbox"
+                    class="readonly-checkbox"
+                    name="bet_checkbox"
+                    value="1"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>
+                  <input
+                    type="checkbox"
+                    class="readonly-checkbox"
+                    name="bet_checkbox"
+                    value="1"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="tips">TIPS (click to view) <span class="arrow">▼</span></p>
+
+        <div class="betContainer">
+          <h1>Today's Bet Predictions</h1>
+          <table class="uk-table uk-table-hover uk-table-divider">
+            <thead>
+              <tr>
+                <th>Table Heading</th>
+                <th>Table Heading</th>
+                <th>Table Heading</th>
+                <th>Table Heading</th>
+                <th>Table Heading</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>
+                  <input
+                    type="checkbox"
+                    class="readonly-checkbox"
+                    name="bet_checkbox"
+                    value="1"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>
+                  <input
+                    type="checkbox"
+                    class="readonly-checkbox"
+                    name="bet_checkbox"
+                    value="1"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>
+                  <input
+                    type="checkbox"
+                    class="readonly-checkbox"
+                    name="bet_checkbox"
+                    value="1"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="tips">TIPS (click to view) <span class="arrow">▼</span></p>
+
+        <div class="betContainer">
+          <h1>Today's Bet Predictions</h1>
+          <table class="uk-table uk-table-hover uk-table-divider">
+            <thead>
+              <tr>
+                <th>Table Heading</th>
+                <th>Table Heading</th>
+                <th>Table Heading</th>
+                <th>Table Heading</th>
+                <th>Table Heading</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>
+                  <input
+                    type="checkbox"
+                    class="readonly-checkbox"
+                    name="bet_checkbox"
+                    value="1"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>
+                  <input
+                    type="checkbox"
+                    class="readonly-checkbox"
+                    name="bet_checkbox"
+                    value="1"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>
+                  <input
+                    type="checkbox"
+                    class="readonly-checkbox"
+                    name="bet_checkbox"
+                    value="1"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="rolloversection">
+        <div>
+          ROLLOVER_DAILY
+          <ul class="bet-list">
+            <li>R</li>
+            <li>RR</li>
+            <li>RRR</li>
+            <li>RRRRR</li>
+            <li>RRRRRR</li>
+            <li>RRRRRRR</li>
+            <li>RRRRR</li>
+            <li>RRRRRR</li>
+            <li>RRRRR</li>
+            <li>RRRRR</li>
+            <li>RRRRRRRRRR</li>
+            <li>RRRR</li>
+            <li>RRRRRR</li>
+            <li>RRRRRRR</li>
+            <li>RRRRR</li>
+            <li>RRRRR</li>
+            <li>RRRRRRRRRRR</li>
+            <li>RRRRRRRR</li>
+            <li>RRRRRRR</li>
+            <li>RRRRRRRRRR</li>
+            <li>RRRRRRRRRR</li>
+            <li>RRRR</li>
+            <li>RRRRRR</li>
+            <li>RRRRRRR</li>
+            <li>RRRRR</li>
+            <li>RRRRR</li>
+            <li>RRRRRRRRRRR</li>
+            <li>RRRRRRRR</li>
+            <li>RRRRRRR</li>
+            <li>RRRRRRRRRR</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="scripts/dropDown.js"></script>
+    <script src="scripts/dropList.js"></script>
+
+    <p class="managerlink">JUST CLICK THE LINK TO GET YOUR ACCOUNT MANAGED</p>
+
+    <div class="statistics">
+      <span class="dailyClients">59,839</span>
+      <span class="totalPredictions">100,238</span>
+      <span class="satisfiedClients">59,763</span>
+    </div>
+
+    <div class="contacts">
+      <div class="socials">
+        <a href="#" class="fa fa-snapchat"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-youtube"></a>
+        <a href="#" class="fa fa-instagram"></a>
+      </div>
+      <div class="email_phone">
+        <div class="email">
+          <i class="fa fa-envelope" style="font-size: 48px; color: red"></i>
+          <div class="text">
+            <span class="title">Email Us</span>
+            <span class="footer">OddsAuraPro@gmail.com</span>
+          </div>
+        </div>
+        <div class="phone">
+          <i class="fa fa-phone" style="font-size: 48px; color: red"></i>
+          <div class="text">
+            <span class="title">Get in Touch</span>
+            <span class="footer">+233 559575037</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="paymentMethod">
+      <img src="images/payments.png" alt="" class="paymentimage" />
+    </div>
+
+    <div class="copyright">
+      <span> Selorm_21 © 2024. PRIVACY POLICY </span>
+      <span class="Powered"> Powered By Selorm_21</span>
+      <span class="terms"> :Terms & Conditions </span>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,177 @@
+.contacts {
+  display: flex;  
+  flex-direction: column;              /* Enables flexbox layout */
+    justify-content: center; /* Distributes space evenly between items */
+    align-items: center;          /* Vertically centers the items */
+    padding: 20px;
+    position: relative;
+    background-color: #2a2a2a; 
+    background-size: cover;
+    background-position: center;
+    color: greenyellow;
+    text-align: center;
+    padding: 50px;
+    height: 80px;
+}
+
+/* Style all font awesome icons */
+
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.fa:active {
+  transform: scale(1.1); /* Zoom in the text when clicked */
+  transition: transform 0.1s ease-in-out;
+  color: #FFD700;
+}
+
+/* Set a specific color for each brand */
+  /* padding: 20px;
+  font-size: 30px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  text-decoration: none; */
+
+/* Facebook */
+.fa-snapchat {
+  display: inline-block;
+  background: #383838;
+  color: #ccc;
+  padding: 20px;
+  font-size: 30px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 40px;
+  font-size: 15px;
+  border-radius: 3px;
+  margin-right: 6px;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.fa-snapchat:hover {
+background-color: #FFFC00;
+}
+
+
+/* Twitter */
+.fa-twitter {
+  display: inline-block;
+  background: #383838;
+  color: #ccc;
+  padding: 20px;
+  font-size: 30px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 40px;
+  font-size: 15px;
+  border-radius: 3px;
+  margin-right: 6px;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.fa-twitter:hover {
+  background-color: #1DA1F2;
+}
+
+.fa-youtube {
+  display: inline-block;
+  background: #383838;
+  color: #ccc;
+  padding: 20px;
+  font-size: 30px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 40px;
+  font-size: 15px;
+  border-radius: 3px;
+  margin-right: 6px;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.fa-youtube:hover {
+  background-color: #FF0000;
+}
+
+.fa-instagram {
+  display: inline-block;
+  background: #383838;
+  color: #ccc;
+  padding: 20px;
+  font-size: 30px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 40px;
+  font-size: 15px;
+  border-radius: 3px;
+  margin-right: 6px;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.fa-instagram:hover {
+  background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+}
+
+.email_phone {
+  display: flex; /* Aligns items horizontally */
+  justify-content: center; /* Center elements horizontally */
+  align-items: center; /* Aligns items vertically in the container */
+  gap: 20px; /* Adds space between elements */
+}
+
+.email {
+  display: flex;
+  align-items: center; /* Vertically align the icon and text */
+  gap: 10px; /* Add some space between the icon and text */
+}
+
+.phone {
+  display: flex;
+  align-items: center; /* Vertically align the icon and text */
+  gap: 10px; /* Add some space between the icon and text */
+}
+
+.text {
+  display: flex;
+  flex-direction: column; /* Stack the words vertically */
+  font-size: 20px; /* Adjust font size if needed */
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #bbb;
+  opacity: 0.9;
+}
+
+.footer {
+  color: #ddd;
+  font-size: 14px;
+  opacity: 0.3;
+}
+
+
