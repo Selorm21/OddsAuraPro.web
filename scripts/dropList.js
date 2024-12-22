@@ -249,3 +249,58 @@ document.addEventListener("DOMContentLoaded", function () {
 
   renderCalendar(currentMonth, currentYear); // Initial render
 });
+
+
+
+
+
+
+
+
+
+
+function updateClock() {
+  const clock = document.querySelector('.clock');
+  const hourHand = clock.querySelector('.hour-hand');
+  const minuteHand = clock.querySelector('.minute-hand');
+  const secondHand = clock.querySelector('.second-hand');
+
+  const now = new Date(); // Local time
+  const hours = now.getHours(); // Local hours
+  const minutes = now.getMinutes(); // Local minutes
+  const seconds = now.getSeconds(); // Local seconds
+
+  // Calculate hand rotations
+  const secondDeg = (seconds / 60) * 360 + 90; // Offset by 90° for initial rotation
+  const minuteDeg = (minutes / 60) * 360 + (seconds / 60) * 6 + 90;
+  const hourDeg = (hours % 12 / 12) * 360 + (minutes / 60) * 30 + 90;
+
+  // Apply transformations
+  secondHand.style.transform = `rotate(${secondDeg}deg)`;
+  minuteHand.style.transform = `rotate(${minuteDeg}deg)`;
+  hourHand.style.transform = `rotate(${hourDeg}deg)`;
+
+  // Update digital clock
+  const digitalTime = document.getElementById('digital-time');
+  const formattedTime = `${padZero(hours)}:${padZero(minutes)}:${padZero(seconds)}`;
+  digitalTime.textContent = formattedTime;
+}
+
+function padZero(value) {
+  return value < 10 ? '0' + value : value;
+}
+
+setInterval(updateClock, 1000);
+updateClock(); // Initialize the clock immediately
+
+
+
+
+
+
+
+
+
+
+
+

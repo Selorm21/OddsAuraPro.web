@@ -1,4 +1,15 @@
 
+
+.time {
+  display: flex;
+  padding: auto;
+  justify-content: space-between; /* Distributes space evenly between items */
+  align-items: center;            /* Vertically centers the items */
+  padding: ;
+}
+
+
+
 .intro {
   display:inline-block;
   background-color:#202833 ;
@@ -36,7 +47,7 @@ color:#FFD700 ;
 
 /* Calendar container */
 .calendar {
-  width: 50%;  /* Adjust width as needed */
+  width: 100%;  /* Adjust width as needed */
   margin: 10px auto;  /* Centers it horizontally with space at the top and bottom */
   margin-left: 10px;
   margin-top: 44px;
@@ -72,9 +83,103 @@ color:#FFD700 ;
 }
 
 #calendar-table td.today {
-  background-color: #009578;
+  background-color: #202833;
   color: white;
   font-weight: bold;
+}
+
+
+.clock-container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+  align-items: center;
+}
+
+
+
+.clock {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border: 8px solid #202833;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffffff, #e0e0e0);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5), inset 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.clock::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #202833;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.number {
+  position: absolute;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #202833  ;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+/* Adjusted Numbers */
+.number:nth-child(1) { top: 12%; left: 50%; }
+.number:nth-child(2) { top: 25%; left: 82%; }
+.number:nth-child(3) { top: 50%; left: 88%; }
+.number:nth-child(4) { top: 75%; left: 82%; }
+.number:nth-child(5) { top: 88%; left: 50%; }
+.number:nth-child(6) { top: 75%; left: 18%; }
+.number:nth-child(7) { top: 50%; left: 12%; }
+.number:nth-child(8) { top: 25%; left: 18%; }
+
+/* Clock hands */
+.hour-hand, .minute-hand, .second-hand {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0% 50%;
+  border-radius: 2px;
+}
+
+.hour-hand {
+  width: 25%;
+  height: 4px;
+  background-color: #333;
+}
+
+.minute-hand {
+  width: 35%;
+  height: 3px;
+  background-color: #555;
+}
+
+.second-hand {
+  width: 40%;
+  height: 2px;
+  background-color: red;
+}
+
+
+/* Digital clock styling */
+.digital-clock {
+  margin-top: 20px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+  font-weight: bolder;
+  color: #FFD700;
+  border: solid;
+  border-color: ;
 }
 
 
