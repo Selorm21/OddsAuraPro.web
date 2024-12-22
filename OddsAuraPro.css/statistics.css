@@ -3,7 +3,7 @@
   justify-content: space-between; /* Distributes space evenly between items */
   align-items: center;            /* Vertically centers the items */
   padding: 50px;
-  
+  margin-top: auto;
   position: relative;
   background-color: black;
   background-image: url(../images/banner-2.jpg);
@@ -12,6 +12,8 @@
   color: greenyellow;
   text-align: center;
   height: 150px;
+  display: flex
+  
 }
 
 /* Create a dark overlay using ::before */
@@ -30,4 +32,14 @@
 .statistics > * {
   position: relative;
   z-index: 2;
+}
+
+.dailyVisitors, .totalPredictions, .satisfiedVisitors {
+  font-size: 50px;
+  color: #009578;
+}
+
+
+.figure {
+  font-weight: bold;
 }

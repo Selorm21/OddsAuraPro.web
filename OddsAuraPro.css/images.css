@@ -9,16 +9,17 @@ width: 450px;
 .hero-section {
   display: flex;
   margin: 2rem 0px;
-
+  padding: 10px;
 }
 
  
 /* Container for the slideshow */
 .slideshow-container {
   position: relative;
-  width: 50%;
+  width: 40%;
   margin: auto;
   overflow: hidden;
+ border-radius: 6px;
 }
 
 /* Style for each slide */

@@ -1,6 +1,7 @@
 .predictionSection {
   display: flex;
-  justify-content: space-between;
+ margin-bottom: 15px;
+ padding: 10px;
 }
 
 .miniMenu {
@@ -8,11 +9,11 @@
   background-color: #fff;
   margin-top: 20px;
   margin-bottom: 20px;
-  
   border-radius: 20px;
-  width: 950px;
+  width: 75%;
   height: 65px;
   box-shadow: 6px 6px 6px gray;
+  width: ;
 }
 
 .miniMenuCaption {
@@ -20,7 +21,7 @@
   justify-content: center;
   align-items: center;
   height: 100%;
- font-weight: 600;
+  font-weight: 600;
   font-family: 'Noto Sans', Helvetica, sans-serif;
   font-size: 20px;
   text-align: center;
@@ -80,14 +81,4 @@
 }
 
 
-.rolloversection {
-  display: inline-block;
-  background-color: #fff;
-  height: 100%;
-  border-radius: 20px;
-  text-align: left;
-  width: 200px;
-  margin-top: 20px;
 
-
-}
