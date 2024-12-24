@@ -1,37 +1,73 @@
+// Function to close all mini-menus except the currently clicked one
+function closeOtherMenus(currentMenu) {
+  const allMenus = document.querySelectorAll('.betContainer, .betContainer_1, .betContainer_2, .betContainer_3');
+  allMenus.forEach(menu => {
+    if (menu !== currentMenu) {
+      menu.style.display = 'none';
+    }
+  });
+}
+
+// Ensure all menus are closed when the page loads
+window.addEventListener('DOMContentLoaded', () => {
+  const allMenus = document.querySelectorAll('.betContainer, .betContainer_1, .betContainer_2, .betContainer_3');
+  allMenus.forEach(menu => {
+    menu.style.display = 'none';
+  });
+});
+
+// Add event listeners for each tips button
 document.querySelector('.tips').addEventListener('click', function (event) {
   event.stopPropagation(); // Prevent the click event from propagating to the document
   const betContainer = document.querySelector('.betContainer');
+  closeOtherMenus(betContainer); // Close other menus
   betContainer.style.display = betContainer.style.display === 'block' ? 'none' : 'block';
 });
 
-// Prevent the submenu from closing when clicking inside it
-document.querySelector('.betContainer').addEventListener('click', function (event) {
-  event.stopPropagation(); // Prevent the click from propagating to the document
+document.querySelector('.tips_1').addEventListener('click', function (event) {
+  event.stopPropagation(); // Prevent the click event from propagating to the document
+  const betContainer = document.querySelector('.betContainer_1');
+  closeOtherMenus(betContainer); // Close other menus
+  betContainer.style.display = betContainer.style.display === 'block' ? 'none' : 'block';
 });
 
-// Close the submenu when clicking outside of it
-document.addEventListener('click', function (event) {
-  const miniButton = document.querySelector('.tips');
-  const betContainer = document.querySelector('.betContainer');
-  
-  if (!miniButton.contains(event.target) && !betContainer.contains(event.target)) {
-    betContainer.style.display = 'none';
-  }
+document.querySelector('.tips_2').addEventListener('click', function (event) {
+  event.stopPropagation(); // Prevent the click event from propagating to the document
+  const betContainer = document.querySelector('.betContainer_2');
+  closeOtherMenus(betContainer); // Close other menus
+  betContainer.style.display = betContainer.style.display === 'block' ? 'none' : 'block';
 });
 
+document.querySelector('.tips_3').addEventListener('click', function (event) {
+  event.stopPropagation(); // Prevent the click event from propagating to the document
+  const betContainer = document.querySelector('.betContainer_3');
+  closeOtherMenus(betContainer); // Close other menus
+  betContainer.style.display = betContainer.style.display === 'block' ? 'none' : 'block';
+});
 
+// Prevent submenus from closing when clicking inside them
+document.querySelectorAll('.betContainer, .betContainer_1, .betContainer_2, .betContainer_3').forEach(container => {
+  container.addEventListener('click', function (event) {
+    event.stopPropagation();
+  });
+});
 
-
-
-document.querySelectorAll('.readonly-checkbox').forEach(checkbox => {
-  checkbox.addEventListener('click', (event) => {
-    event.preventDefault(); // Prevent the default checkbox toggle behavior
+// Close all menus when clicking outside
+document.addEventListener('click', function () {
+  const allMenus = document.querySelectorAll('.betContainer, .betContainer_1, .betContainer_2, .betContainer_3');
+  allMenus.forEach(menu => {
+    menu.style.display = 'none';
   });
 });
 
 
 
+
+
+
+
 let slideIndex = 1;
+let autoSlideInterval; // Variable to store the interval
 showSlide(slideIndex);
 
 // Function to change slide with arrows
@@ -46,87 +82,42 @@ function currentSlide(n) {
 
 // Function to display the appropriate slide
 function showSlide(n) {
-  let slides = document.querySelectorAll('.slide');
-  let dots = document.querySelectorAll('.dot');
-  
-  if (n > slides.length) { slideIndex = 1; }
-  if (n < 1) { slideIndex = slides.length; }
+  const slides = document.querySelectorAll('.slide');
+  const dots = document.querySelectorAll('.dot');
 
-  // Hide all slides
+  if (slides.length === 0 || dots.length === 0) return;
+
+  // Reset slideIndex if it exceeds the number of slides
+  if (n > slides.length) slideIndex = 1;
+  if (n < 1) slideIndex = slides.length;
+
+  // Hide all slides and deactivate all dots
   slides.forEach(slide => slide.style.display = 'none');
-
-  // Remove 'active' class from all dots
   dots.forEach(dot => dot.classList.remove('active'));
 
-  // Show the current slide and set the corresponding dot as active
+  // Show the current slide and activate the corresponding dot
   slides[slideIndex - 1].style.display = 'block';
   dots[slideIndex - 1].classList.add('active');
 }
 
-document.querySelector('.tips_1').addEventListener('click', function (event) {
-  event.stopPropagation(); // Prevent the click event from propagating to the document
-  const betContainer = document.querySelector('.betContainer_1');
-  betContainer.style.display = betContainer.style.display === 'block' ? 'none' : 'block';
-});
+// Auto-slide functionality
+function startAutoSlide() {
+  autoSlideInterval = setInterval(() => {
+    changeSlide(1); // Move to the next slide
+  }, 5000); // Adjust the interval time as needed (5000ms = 5 seconds)
+}
 
-// Prevent the submenu from closing when clicking inside it
-document.querySelector('.betContainer_1').addEventListener('click', function (event) {
-  event.stopPropagation(); // Prevent the click from propagating to the document
-});
+function stopAutoSlide() {
+  clearInterval(autoSlideInterval);
+}
 
-// Close the submenu when clicking outside of it
-document.addEventListener('click', function (event) {
-  const miniButton = document.querySelector('.tips_1');
-  const betContainer = document.querySelector('.betContainer_1');
+// Start auto-sliding on page load
+startAutoSlide();
 
-  if (!miniButton.contains(event.target) && !betContainer.contains(event.target)) {
-    betContainer.style.display = 'none';
-  }
-});
-
-
-document.querySelector('.tips_2').addEventListener('click', function (event) {
-  event.stopPropagation(); // Prevent the click event from propagating to the document
-  const betContainer = document.querySelector('.betContainer_2');
-  betContainer.style.display = betContainer.style.display === 'block' ? 'none' : 'block';
-});
-
-// Prevent the submenu from closing when clicking inside it
-document.querySelector('.betContainer_2').addEventListener('click', function (event) {
-  event.stopPropagation(); // Prevent the click from propagating to the document
-});
-
-// Close the submenu when clicking outside of it
-document.addEventListener('click', function (event) {
-  const miniButton = document.querySelector('.tips_2');
-  const betContainer = document.querySelector('.betContainer_2');
-
-  if (!miniButton.contains(event.target) && !betContainer.contains(event.target)) {
-    betContainer.style.display = 'none';
-  }
-});
-
-
-document.querySelector('.tips_3').addEventListener('click', function (event) {
-  event.stopPropagation(); // Prevent the click event from propagating to the document
-  const betContainer = document.querySelector('.betContainer_3');
-  betContainer.style.display = betContainer.style.display === 'block' ? 'none' : 'block';
-});
-
-// Prevent the submenu from closing when clicking inside it
-document.querySelector('.betContainer_3').addEventListener('click', function (event) {
-  event.stopPropagation(); // Prevent the click from propagating to the document
-});
-
-// Close the submenu when clicking outside of it
-document.addEventListener('click', function (event) {
-  const miniButton = document.querySelector('.tips_3');
-  const betContainer = document.querySelector('.betContainer_3');
-
-  if (!miniButton.contains(event.target) && !betContainer.contains(event.target)) {
-    betContainer.style.display = 'none';
-  }
-});
+// Pause the slideshow on mouse hover and resume on mouse leave
+const slideshowContainer = document.querySelector('.slideshow-container');
+slideshowContainer.addEventListener('mouseover', stopAutoSlide);
+slideshowContainer.addEventListener('mouseout', startAutoSlide);
 
 
 
@@ -135,6 +126,12 @@ document.addEventListener('click', function (event) {
 
 
 
+
+
+
+
+
+// COUNTER
 document.addEventListener("DOMContentLoaded", function () {
   const counters = document.querySelectorAll(".figure"); // Select all figure elements
   const options = {
@@ -179,7 +176,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
+// CALENDAR
 document.addEventListener("DOMContentLoaded", function () {
   const calendarBody = document.getElementById("calendar-body");
   const monthYear = document.getElementById("month-year");
@@ -258,7 +255,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
+// CLOCK
 function updateClock() {
   const clock = document.querySelector('.clock');
   const hourHand = clock.querySelector('.hour-hand');
@@ -293,6 +290,54 @@ function padZero(value) {
 setInterval(updateClock, 1000);
 updateClock(); // Initialize the clock immediately
 
+
+
+
+
+
+
+
+
+// CONTACTS  ARE LOCATED
+  document.querySelector('.contact').addEventListener('click', function () {
+    document.querySelector('.contacts').scrollIntoView({ behavior: 'smooth' });
+  });
+
+
+
+
+
+
+  // ABOUT LINKED 
+  document.querySelector('.about').addEventListener('click', function () {
+    window.location.href = 'about.html'; // Replace 'about.html' with the relative or absolute path to your page.
+    }
+  );
+
+
+
+
+
+
+
+   // ACADEMY LINKED 
+   document.querySelector('.academy').addEventListener('click', function () {
+    window.location.href = 'bettingAcademy.html'; // Replace 'about.html' with the relative or absolute path to your page.
+    }
+  );
+
+
+
+// HOMEBUTTON LINKED 
+document.querySelector('.homebuttonA').addEventListener('click', function () {
+  window.location.href = '../OddsAuraPro.html'; // Redirect to OddsAuraPro.html
+});
+
+
+
+  
+
+  
 
 
 
