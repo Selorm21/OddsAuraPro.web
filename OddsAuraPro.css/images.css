@@ -1,43 +1,79 @@
-
-/* .motivation {
-height: 500px;
-width: 450px;
-} */
-
-
-
+/* General Styles for Larger Screens */
 .hero-section {
   display: flex;
-  margin: 2rem 0px;
   padding: 10px;
-  vertical-align: top;
- 
-}
-
- 
-/* Container for the slideshow */
-.slideshow-container {
+  background-image: url('../images/background_pic_1.jpg');
+  background-size: cover;
+  background-position: center;
   position: relative;
-  width: 40%;
-  margin: auto;
-  overflow: hidden;
- border-radius: 6px;
+  height: 100vh;
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  text-align: center; /* Optional: center text inside the hero section */
 }
 
-/* Style for each slide */
-.slide {
-  display: none;
+.hero-section .content {
+  max-width: 90%; /* Prevent the content from stretching too much */
+  font-size: 2vw; /* Use vw units to make font size responsive */
+  color: white; /* Example: text color */
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 5px; /* Reduced padding on smaller screens */
+    height: 80vh; /* Adjust height for smaller screens */
+  }
+
+  .hero-section .content {
+    font-size: 5vw; /* Adjust font size for smaller screens */
+  }
+}
+
+
+
+.hero-section::before {
+  content: '';
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  background: red;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
   
 }
 
-/* Image styling */
-.slide img {
-  width: 100%;
+.hero-section > * {
+  position: relative;
+  z-index: 2;
+  margin: 0; /* Remove any margin */
+  padding: 0; /* Remove any padding */
 }
 
-/* Navigation arrows (previous and next) */
+
+
+.slideshow-container {
+  position: relative;
+  width: 40%; /* Base width for larger screens */
+  height: 100%; /* Ensure height scales to fit the container */
+  margin: auto;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  height: auto; /* Ensure each slide takes up 100% width */
+}
+
+.slide img {
+  width: 100%; /* Ensure the image width is responsive */
+  height: 100%; /* Ensure image fills the container height */
+  object-fit: cover; /* Ensure the image maintains aspect ratio while covering the container */
+}
+
 .prev, .next {
   position: absolute;
   top: 50%;
@@ -59,22 +95,10 @@ width: 450px;
   right: 10px;
 }
 
-/* Hover effect for arrows */
 .prev:hover, .next:hover {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* Slide fade effect */
-.fade {
-  animation: fadeEffect 1s;
-}
-
-@keyframes fadeEffect {
-  from { opacity: 0.4; }
-  to { opacity: 1; }
-}
-
-/* Dots for slide indicators */
 .dots-container {
   text-align: center;
   margin-top: 10px;
@@ -94,5 +118,72 @@ width: 450px;
   background-color: #717171;
 }
 
+/* Responsive Design */
 
+/* Tablets (768px to 991px) */
+@media (max-width: 991px) {
+  .hero-section {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
 
+  .slideshow-container {
+    width: 60%; /* Adjust slideshow width for tablets */
+    margin: 20px auto;
+  }
+
+  .prev, .next {
+    font-size: 20px; /* Reduce arrow size */
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* Mobile Phones (480px to 767px) */
+@media (max-width: 767px) {
+  .hero-section {
+    padding: 10px;
+    height: auto;
+  }
+
+  .slideshow-container {
+    width: 80%; /* Make the slideshow almost full-width */
+    margin: 15px auto;
+  }
+
+  .prev, .next {
+    font-size: 18px; /* Further reduce arrow size */
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+/* Extra Small Screens (Below 480px) */
+@media (max-width: 479px) {
+  .hero-section {
+    padding: 5px;
+    height: auto;
+  }
+
+  .slideshow-container {
+    width: 100%; /* Full width slideshow */
+    margin: 10px auto;
+  }
+
+  .prev, .next {
+    font-size: 16px; /* Smaller arrow size */
+    padding: 8px;
+  }
+
+  .dot {
+    width: 6px;
+    height: 6px;
+  }
+}

@@ -335,6 +335,65 @@ document.querySelector('.homebuttonA').addEventListener('click', function () {
 
 
 
+
+
+
+let lastScrollTop = 0;  // To keep track of the last scroll position
+const header = document.getElementById('header');
+
+window.addEventListener('scroll', () => {
+  let currentScroll = window.scrollY;
+
+  // If the user scrolls down, hide the header
+  if (currentScroll > lastScrollTop) {
+    header.style.top = '-60px';  // Hide header by moving it out of view
+  } else {
+    header.style.top = '0';  // Show header when scrolling up
+  }
+
+  lastScrollTop = currentScroll;  // Update last scroll position
+});
+
+
+
+
+
+
+// JavaScript to toggle the menu and buttons on small screens
+document.getElementById("menuButton").addEventListener("click", function(event) {
+  var buttons = document.getElementById("buttons");
+
+  // Prevent the click event from propagating to the document
+  event.stopPropagation();
+
+  // Toggle the submenu when the menu button is clicked
+  if (buttons.style.display === "block") {
+    buttons.style.display = "none";  // Hide the submenu if it's visible
+  } else {
+    buttons.style.display = "block";  // Show the submenu if it's hidden
+  }
+});
+
+// Close the submenu if the user clicks outside of it
+document.addEventListener("click", function(event) {
+  var buttons = document.getElementById("buttons");
+  var menuButton = document.getElementById("menuButton");
+
+  // Check if the click was outside the menu button and submenu
+  if (!menuButton.contains(event.target) && !buttons.contains(event.target)) {
+    buttons.style.display = "none";  // Hide the submenu
+  }
+});
+
+
+
+
+
+
+
+
+
+
   
 
   

@@ -1,45 +1,43 @@
-
+/* General Styles for Desktop and Larger Screens */
 .header {
   display: grid;
   grid-template-columns: 150px 1fr 1fr;
   background-color: #202833;
-  font-family:  'Cinzel', serif;
-  padding-top: 0px;
-  padding-bottom: 0px;
+  font-family: 'Cinzel', serif;
+  padding-top: 0;
+  padding-bottom: 0;
   margin: 0;
-  padding: 0%;
   width: 100%;
-  position: sticky; /* Makes the header stick until scrolled past */
-  top: 0; /* Sticks the header to the top of the page */
-  z-index: 1000; /* Ensures the header stays above other content */
-  box-shadow: 12px 12px 12px gray;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 2px solid #FFD700;
+  transition: all 1s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-  
-
-  .leftside {
-    display: flex;
-    flex-direction: row;
-  }
+.leftside {
+  display: flex;
+  flex-direction: row;
+}
 
 .allmenubar {
-  padding-top: 25px;
+  /* padding-top: 25px; */
   cursor: pointer;
   padding-left: 12px;
-  padding-top: 40px;
+  /* padding-top: 40px; */
+  display: none; /* Initially hidden */
 }
-
 
 .homebutton {
   background-color: #202833;
   border: none;
   color: white;
-  padding: 6px 6px;
+  padding: 6px 12px;
   font-size: 16px;
   cursor: pointer;
   border-radius: 5px;
   font-size: 16px;
- 
 }
 
 .homebuttonA {
@@ -58,12 +56,13 @@
   background-color: white;
   margin: 3px 0;
 }
+
 .search-bar {
   display: flex;
   width: 100%;
-  /* background: red; */
   justify-content: center;
 }
+
 .sitename {
   text-align: center;
   font-family: 'Gilroy-Heavy', sans-serif;
@@ -72,7 +71,7 @@
   line-height: 44px;
   width: 100%;
   font-weight: 900;
-  font-size: 36px; /* Adjust this value to make the text bigger */
+  font-size: 36px;
   transition: background-color 0.3s ease;
 }
 
@@ -81,11 +80,12 @@
   overflow: hidden;
 }
 
-.sitenameandsearchbar  {
+.sitenameandsearchbar {
   display: flex;
   flex-direction: column;
-  padding-left: 30px;
-  padding-bottom: 30px;
+  padding-left:5%;
+  padding-right: 5%;
+  padding-bottom: 2%;
 }
 
 .Odds {
@@ -103,12 +103,14 @@
 .buttons {
   padding-top: 35px;
   padding-left: 30px;
+  display: flex;
+  flex-direction: row;
 }
 
-.about {
-  background-color: #202833; /* Bright Orange */
-  color: white; /* Text color */
-  padding: 5px 5px;
+.about, .vip, .contact, .academy {
+  background-color: #202833;
+  color: white;
+  padding: 5px 10px;
   border: none;
   border-radius: 5px;
   font-size: 16px;
@@ -116,78 +118,114 @@
   transition: background-color 0.3s ease;
 }
 
-.about:hover {
-  color: #FFD700;
-}
-
-.about:active {
-  transform: scale(1.1); /* Zoom in the text when clicked */
-  transition: transform 0.1s ease-in-out;
-  color: #FFD700;
-}
-
-.vip {
-  background-color: #202833; /* Bright Orange */
-  color: white; /* Text color */
-  padding: 5px 5px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.vip:hover {
-  color: #FFD700;
-  
-}
-
-.vip:active {
-  transform: scale(1.1); /* Zoom in the text when clicked */
-  transition: transform 0.1s ease-in-out;
-  color: #FFD700;
-}
-
-.contact {
-  background-color: #202833; /* Bright Orange */
-  color: white; /* Text color */
-  padding: 5px 5px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  width: 150px;
-  transition: background-color 0.3s ease;
-}
-
-.contact:hover {
-  color: #D4AF37;
-  
-}
-
-.contact:active {
-  transform: scale(1.1); /* Zoom in the text when clicked */
-  transition: transform 0.1s ease-in-out;
-  color: #FFD700;
-}
-
-.academy {
-  background-color: #202833; /* Bright Orange */
-  color: white; /* Text color */
-  padding: 5px 5px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
+.about:hover,
+.vip:hover,
+.contact:hover,
 .academy:hover {
   color: #FFD700;
 }
 
-.academy:active  {
-  transform: scale(1.1); /* Zoom in the text when clicked */
+.about:active,
+.vip:active,
+.contact:active,
+.academy:active {
+  transform: scale(1.1);
   transition: transform 0.1s ease-in-out;
   color: #FFD700;
+}
+
+/* Responsive Design for Smaller Screens */
+
+/* For Tablets (screens 768px and below) */
+@media (max-width: 768px) {
+  .header {
+    grid-template-columns: 1fr 1fr; /* Adjust layout to two columns for tablets */
+    padding: 10px;
+  }
+
+  .sitename {
+    font-size: 28px;  /* Adjust font size for sitename on tablets */
+  }
+
+  .searchbar {
+    width: 80%;  /* Adjust search bar width */
+  }
+
+  .homebutton {
+    font-size: 14px; /* Smaller font size for buttons on tablets */
+    padding: 5%;
+  }
+
+  .buttons {
+    display: none; /* Hide buttons by default on small screens */
+    flex-direction: column; /* Stack the buttons vertically */
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    background-color: #202833;
+    border-radius: 5px;
+    width: 200px;
+    z-index: 999; /* Ensure it appears above other content */
+  }
+
+  .allmenubar {
+    display: block; /* Show menu button on small screens */
+    padding: 5%;
+  }
+
+  .about,
+  .vip,
+  .contact,
+  .academy {
+    font-size: 14px;  /* Reduce font size for smaller buttons */
+    padding: 10px;
+    text-align: left;
+  }
+  
+  /* Left and Right positioning for Menu button and Home button */
+  .leftside {
+    justify-content: space-between; /* Spread out items to left and right */
+    width: 100%; /* Full width */
+  }
+
+  .homebuttonA {
+    padding-top: 0; /* Adjust padding */
+    padding-left: 0; /* Adjust padding */
+  }
+}
+
+
+
+/* For Mobile (screens 480px and below) */
+@media (max-width: 480px) {
+  .header {
+    grid-template-columns: 1fr; /* Stack the columns in one column layout */
+    padding: 5px;
+  }
+
+  .sitename {
+    font-size: 22px;  /* Adjust font size for sitename on mobile */
+  }
+
+  .searchbar {
+    width: 90%;  /* Make search bar almost full width */
+    /* padding-left: 10px; */
+  }
+
+  .homebutton {
+    font-size: 12px;
+    padding: 5px 5px;
+  }
+
+  .buttons {
+    padding-left: 10px;
+  }
+
+  .about,
+  .vip,
+  .contact,
+  .academy {
+    font-size: 14px;
+    padding: 4px 4px;
+  }
 }

@@ -1,7 +1,6 @@
- 
- .tips {
-  
-  background-color:#FFD700 ;
+/* Common styles for all tips */
+.tips, .tips_1, .tips_2, .tips_3 {
+  background-color: #FFD700;
   text-align: center;
   font-weight: 500;
   margin-top: 60px;
@@ -13,52 +12,33 @@
   box-shadow: 6px 6px 6px gray;
   padding-top: 15px;
   cursor: pointer;
- }
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover and resizing effects */
+}
 
- .tips_1 {
-  
-  background-color:#FFD700 ;
-  text-align: center;
-  font-weight: 500;
-  margin-top: 60px;
-  color: white;
-  margin-right: 20px;
-  border-radius: 5px;
-  width: 100%;
-  height: 40px;
-  box-shadow: 6px 6px 6px gray;
-  padding-top: 15px;
-  cursor: pointer;
- }
+/* Hover effect for all screen sizes */
+.tips:hover, .tips_1:hover, .tips_2:hover, .tips_3:hover {
+  background-color: #FFC107; /* Slightly lighter shade on hover */
+  box-shadow: 8px 8px 10px gray;
+}
 
- .tips_2 {
-  
-  background-color:#FFD700 ;
-  text-align: center;
-  font-weight: 500;
-  margin-top: 60px;
-  color: white;
-  margin-right: 20px;
-  border-radius: 5px;
-  width: 100%;
-  height: 40px;
-  box-shadow: 6px 6px 6px gray;
-  padding-top: 15px;
-  cursor: pointer;
- }
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  /* Adjustments for tablets and smaller screens */
+  .tips, .tips_1, .tips_2, .tips_3 {
+    margin-right: 10px; /* Reduced margin */
+    padding-top: 12px;  /* Adjusted padding for smaller height */
+    font-size: 14px;    /* Smaller font size for readability */
+    height: 38px;       /* Slightly reduce height for compactness */
+  }
+}
 
- .tips_3 {
-  
-  background-color:#FFD700 ;
-  text-align: center;
-  font-weight: 500;
-  margin-top: 60px;
-  color: white;
-  margin-right: 20px;
-  border-radius: 5px;
-  width: 100%;
-  height: 40px;
-  box-shadow: 6px 6px 6px gray;
-  padding-top: 15px;
-  cursor: pointer;
- }
+@media (max-width: 480px) {
+  /* Adjustments for very small screens (e.g., mobile phones) */
+  .tips, .tips_1, .tips_2, .tips_3 {
+    margin-top: 20px;  /* Reduce vertical spacing between elements */
+    height: 35px;      /* Further reduce height for very small screens */
+    font-size: 12px;   /* Smaller font size for optimal display */
+    margin-right: 5px; /* Further minimize margins */
+    padding-top: 10px; /* Adjust padding for reduced height */
+  }
+}

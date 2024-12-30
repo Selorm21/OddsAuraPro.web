@@ -1,44 +1,32 @@
 .contacts {
   display: flex;  
   flex-direction: column;              /* Enables flexbox layout */
-    justify-content: center; /* Distributes space evenly between items */
-    align-items: center;          /* Vertically centers the items */
-    padding: 20px;
-    position: relative;
-    background-color: #2a2a2a; 
-    background-size: cover;
-    background-position: center;
-    color: greenyellow;
-    text-align: center;
-    padding: 50px;
-    height: 200px;
+  justify-content: center; /* Centers content vertically */
+  align-items: center;          /* Centers content horizontally */
+  padding: 50px;                /* Applied padding only once */
+  position: relative;
+  background-color: #2a2a2a; 
+  background-size: cover;
+  background-position: center;
+  color: greenyellow;
+  text-align: center;
+  height: 200px;
 }
 
-/* Style all font awesome icons */
-
-
-/* Add a hover effect if you want */
+/* Font Awesome Hover Effects */
 .fa:hover {
   opacity: 0.7;
   cursor: pointer;
 }
 
 .fa:active {
-  transform: scale(1.1); /* Zoom in the text when clicked */
+  transform: scale(1.1); /* Zoom effect */
   transition: transform 0.1s ease-in-out;
-  color: #FFD700;
+  color: #FFD700; /* Gold color when clicked */
 }
 
-/* Set a specific color for each brand */
-  /* padding: 20px;
-  font-size: 30px;
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  text-decoration: none; */
-
-/* Facebook */
-.fa-snapchat {
+/* Specific icon styles */
+.fa-snapchat, .fa-twitter, .fa-youtube, .fa-instagram {
   display: inline-block;
   background: #383838;
   color: #ccc;
@@ -47,118 +35,47 @@
   width: 40px;
   height: 40px;
   text-align: center;
-  text-decoration: none;
   line-height: 40px;
-  font-size: 15px;
   border-radius: 3px;
   margin-right: 6px;
-  -webkit-transition: all 0.3s ease-in;
-  -moz-transition: all 0.3s ease-in;
-  -o-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
 
 .fa-snapchat:hover {
-background-color: #FFFC00;
-}
-
-
-/* Twitter */
-.fa-twitter {
-  display: inline-block;
-  background: #383838;
-  color: #ccc;
-  padding: 20px;
-  font-size: 30px;
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  text-decoration: none;
-  line-height: 40px;
-  font-size: 15px;
-  border-radius: 3px;
-  margin-right: 6px;
-  -webkit-transition: all 0.3s ease-in;
-  -moz-transition: all 0.3s ease-in;
-  -o-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
+  background-color: #FFFC00;
 }
 
 .fa-twitter:hover {
   background-color: #1DA1F2;
 }
 
-.fa-youtube {
-  display: inline-block;
-  background: #383838;
-  color: #ccc;
-  padding: 20px;
-  font-size: 30px;
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  text-decoration: none;
-  line-height: 40px;
-  font-size: 15px;
-  border-radius: 3px;
-  margin-right: 6px;
-  -webkit-transition: all 0.3s ease-in;
-  -moz-transition: all 0.3s ease-in;
-  -o-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
-}
-
 .fa-youtube:hover {
   background-color: #FF0000;
-}
-
-.fa-instagram {
-  display: inline-block;
-  background: #383838;
-  color: #ccc;
-  padding: 20px;
-  font-size: 30px;
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  text-decoration: none;
-  line-height: 40px;
-  font-size: 15px;
-  border-radius: 3px;
-  margin-right: 6px;
-  -webkit-transition: all 0.3s ease-in;
-  -moz-transition: all 0.3s ease-in;
-  -o-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
 }
 
 .fa-instagram:hover {
   background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
 }
 
+/* Flexbox for aligning email and phone icons */
 .email_phone {
-  display: flex; /* Aligns items horizontally */
-  justify-content: center; /* Center elements horizontally */
-  align-items: center; /* Aligns items vertically in the container */
-  gap: 20px; /* Adds space between elements */
-}
-
-.email {
   display: flex;
-  align-items: center; /* Vertically align the icon and text */
-  gap: 10px; /* Add some space between the icon and text */
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
-.phone {
+.email, .phone {
   display: flex;
-  align-items: center; /* Vertically align the icon and text */
-  gap: 10px; /* Add some space between the icon and text */
+  align-items: center; /* Vertically align the icons and text */
+  gap: 10px; /* Add space between icon and text */
 }
 
+/* Text and title styling */
 .text {
   display: flex;
-  flex-direction: column; /* Stack the words vertically */
-  font-size: 20px; /* Adjust font size if needed */
+  flex-direction: column; /* Stack text vertically */
+  font-size: 20px;
   color:  #bbb;
   font-weight: bold;
 }
@@ -176,4 +93,32 @@ background-color: #FFFC00;
   opacity: 0.3;
 }
 
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .contacts {
+    padding: 20px;  /* Reduce padding for smaller screens */
+    height: auto;   /* Allow height to adjust based on content */
+  }
 
+  .text {
+    font-size: 18px; /* Adjust text size */
+  }
+
+  .fa {
+    font-size: 25px; /* Reduce icon size */
+  }
+}
+
+@media (max-width: 480px) {
+  .contacts {
+    padding: 15px; /* Further reduce padding on very small screens */
+  }
+
+  .text {
+    font-size: 16px; /* Smaller font size on mobile */
+  }
+
+  .fa {
+    font-size: 20px; /* Even smaller icons for mobile */
+  }
+}

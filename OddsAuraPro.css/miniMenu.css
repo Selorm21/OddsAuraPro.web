@@ -1,21 +1,35 @@
-.predictionSection {
+.all_predictions {
   display: flex;
- margin-bottom: 15px;
- padding: 10px;
+  align-items: flex-start; /* Align at the top */
+  gap: 20px; /* Space between the blocks */
+  flex-wrap: wrap; /* Wrap items on smaller screens */
 }
 
+/* General prediction section layout */
+.predictionSection {
+  display: inline-block;
+  margin-bottom: 15px;
+  padding: 10px;
+  width: 70%; /* Takes up 70% width by default */
+  height: auto; /* Adjust height dynamically */
+  box-sizing: border-box;
+}
+
+/* Mini Menu container styling */
 .miniMenu {
   display: inline-block;
   background-color: #fff;
   margin-top: 20px;
   margin-bottom: 20px;
   border-radius: 20px;
-  width: 75%;
+  width: 100%; /* Takes full width by default */
   height: 65px;
   box-shadow: 6px 6px 6px gray;
-  width: ;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
+/* Mini menu caption styling */
 .miniMenuCaption {
   display: flex;
   justify-content: center;
@@ -28,57 +42,52 @@
   width: 100%;
 }
 
-.sort {
-  background-color: #FFD700;
-  color: white;
-  padding: 8px 12px;
-  margin-left: 50px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 14px;
-  position: relative;
-}
-
-.sort:hover {
-  background-color: #f1d951;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
 .arrow {
   font-size: 15px;
   margin-left: 7px;
 }
 
+/* Responsive Styles */
 
-.submenu {
-  display: none;
-  left: 0;
-  top: 100%;     /* Positions the submenu directly below the button */  
-  background-color: white;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
-  min-width: 120px;
-  z-index: 1;
-  top: 100%; /* Position below the button */
-  left: 0;
+/* For tablet screens (width <= 768px) */
+@media (max-width: 768px) {
+  .all_predictions {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align items */
+  }
+
+  .predictionSection {
+    width: 90%; /* Reduce width for better fit */
+    margin-bottom: 20px;
+  }
+
+  .miniMenu {
+    width: 100%; /* Full-width menu */
+    margin-left: 0;
+  }
+
+  .miniMenuCaption {
+    font-size: 16px; /* Adjust font size */
+  }
 }
 
-.submenu a {
-  color: #333;
-  padding: 10px;
-  text-decoration: none;
-  display: block;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  
-  z-index: 1000;
+/* For mobile screens (width <= 480px) */
+@media (max-width: 480px) {
+  .predictionSection {
+    width: 100%; /* Full width on small screens */
+    padding: 8px; /* Reduce padding for better fit */
+  }
 
+  .miniMenu {
+    height: auto; /* Adjust height dynamically */
+    padding: 8px; /* Reduce padding */
+  }
+
+  .miniMenuCaption {
+    font-size: 14px; /* Smaller font size */
+  }
+
+  .arrow {
+    font-size: 12px; /* Adjust arrow size */
+  }
 }
-
-.submenu a:hover {
-  background-color: #f1f1f1;
-}
-
-
-
