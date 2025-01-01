@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OddsAuraPro</title>
   </head>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -58,28 +62,54 @@
     crossorigin="anonymous"
   ></script>
 
+  
+
   <body class="body">
+
+    <!-- <div class="date-time-bar">
+      <span id="date-time">
+        <i class="fas fa-calendar-alt"></i> <span id="date"></span>
+        <i class="fas fa-clock"></i> <span id="time"></span>
+      </span>
+    </div> -->
+
+    <div class="time-date-bar" id="time-date-bar"></div>
+
+    <script>
+      function updateTime() {
+        const now = new Date();
+        const options = {
+          weekday: "long",
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        };
+        const date = now.toLocaleDateString(undefined, options);
+        const time = now.toLocaleTimeString();
+
+        document.getElementById("time-date-bar").innerText =
+          date + " | " + time;
+      }
+
+      setInterval(updateTime, 1000);
+      updateTime(); // Initialize the time when the page loads
+    </script>
+    
+
     <div class="header" id="header">
       <div class="leftside">
-        <div class="allmenubar" id="menuButton">
-          <div class="menubar"></div>
-          <div class="menubar"></div>
-          <div class="menubar"></div>
-        </div>
+        
         <div class="homebuttonA">
           <button class="homebutton"><i class="fa fa-home"></i> Home</button>
         </div>
       </div>
     
-      <div class="sitenameandsearchbar">
+      
         <div class="sitename">
           <span class="odds">Odds</span><span class="aura">Aura</span><span class="pro">Pro</span>
         </div>
-        <div class="search-bar">
-          <input type="text" class="searchbar" placeholder="need an assist?" />
-          <button type="submit"><i class="fa fa-search"></i></button>
-        </div>
-      </div>
+        
+    
     
       <div class="buttons" id="buttons">
         <button class="about">ABOUT US</button>
@@ -87,6 +117,13 @@
         <button class="contact">CONTACT US</button>
         <button class="academy">BETTING ACADEMY</button>
       </div>
+
+      <div class="allmenubar" id="menuButton">
+        <div class="menubar"></div>
+        <div class="menubar"></div>
+        <div class="menubar"></div>
+      </div>
+
     </div>
     
 
@@ -97,7 +134,7 @@
         </div>
 
         <div class="slide fade">
-          <img src="images/ronaldo.png" alt="Image 2" />
+          <img src="images/ronaldo.jpg" alt="Image 2" />
         </div>
 
         <div class="slide fade">
@@ -130,52 +167,39 @@
           </p>
         </div>
 
-        <div class="time">
-          <!-- Calendar Section -->
-          <div class="calendar">
-            <div id="calendar-header">
-              <button id="prev-month">&lt;</button>
-              <span id="month-year"></span>
-              <button id="next-month">&gt;</button>
-            </div>
-            <table id="calendar-table">
-              <thead>
-                <tr>
-                  <th>Sun</th>
-                  <th>Mon</th>
-                  <th>Tue</th>
-                  <th>Wed</th>
-                  <th>Thu</th>
-                  <th>Fri</th>
-                  <th>Sat</th>
-                </tr>
-              </thead>
-              <tbody id="calendar-body">
-                <!-- Days will be dynamically generated -->
-              </tbody>
-            </table>
-          </div>
-
-          <div class="clock-container">
-            <div class="clock">
-              <!-- Numbers -->
-              <div class="number">12</div>
-              <div class="number">1</div>
-              <div class="number">3</div>
-              <div class="number">5</div>
-              <div class="number">6</div>
-              <div class="number">7</div>
-              <div class="number">9</div>
-              <div class="number">11</div>
-              <!-- Hands -->
-              <div class="hour-hand"></div>
-              <div class="minute-hand"></div>
-              <div class="second-hand"></div>
-            </div>
-
-            <div class="digital-clock">
-              <span class="time" id="digital-time">00:00:00</span>
-            </div>
+        <div id="bet-responsibly-container">
+          <div id="bet-responsibly-content">
+            <h2>Bet Responsibly</h2>
+            <p>Betting is an exciting way to add a thrill to your favorite games, but it’s important to do so responsibly. Follow these tips to maintain a safe and enjoyable betting experience:</p>
+            
+            <h3>Guidelines for Responsible Betting</h3>
+            <ul>
+              <li><strong>Only bet what you can afford to lose:</strong> Treat any money spent on betting as part of your entertainment budget.</li>
+              <li><strong>Set limits on your time and spending:</strong> Decide in advance how much time and money you are willing to dedicate to betting.</li>
+              <li><strong>Never chase losses:</strong> Accept that losing is part of the experience and avoid the temptation to recover losses by betting more.</li>
+              <li><strong>Bet for entertainment, not as a source of income:</strong> Always treat betting as a hobby, not as a way to make money.</li>
+            </ul>
+      
+            <h3>Self-Assessment Questions</h3>
+            <ul>
+              <li>Do you ever spend more on betting than you intended?</li>
+              <li>Does betting interfere with your daily responsibilities or relationships?</li>
+              <li>Have you borrowed money or sold possessions to fund your bets?</li>
+              <li>Do you feel anxious, stressed, or guilty about your betting habits?</li>
+            </ul>
+      
+            <h3>Resources for Support</h3>
+            <ul>
+              <li><a href="https://www.gamblersanonymous.org" target="_blank">Gamblers Anonymous</a>: Find support groups and resources.</li>
+              <li><strong>National Gambling Helpline:</strong> Call <a href="tel:18004262537">1-800-GAMBLER</a> (1-800-426-2537) for confidential assistance.</li>
+              <li>Check for local resources in your region for additional support.</li>
+            </ul>
+      
+            <h3>Legal Age Warning</h3>
+            <p>Betting is only allowed for individuals above the legal gambling age in your jurisdiction. Ensure you comply with these laws before participating in any betting activities.</p>
+      
+            <h3>Disclaimer</h3>
+            <p>This website provides betting predictions and tips for entertainment purposes only. There are no guarantees of success, and betting carries inherent risks. Please bet responsibly.</p>
           </div>
         </div>
       </div>
@@ -189,11 +213,11 @@
       <p class="tips">TIPS (click to view) <span class="arrow">▼</span></p>
 
       <div class="betContainer">
-        <h1>Today's Bet Predictions</h1>
-        <table class="uk-table uk-table-hover uk-table-divider">
+        <h1>Today's Bet Predictions</h1><h1>Today's Bet Predictions</h1>
+        <table class="uk-table uk-table-hover uk-table-divider numbered-table">
           <thead>
             <tr>
-              <th>TIME</th>
+              <th>#</th>
               <th>LEAGUES</th>
               <th>TEAMS</th>
               <th>TIPS</th>
@@ -202,7 +226,7 @@
           </thead>
           <tbody>
             <tr>
-              <td>23/12/2024 <br />09:00 GMT</td>
+              <td></td>
               <td>Table Data</td>
               <td>Table Data</td>
               <td>Table Data</td>
@@ -216,7 +240,7 @@
               </td>
             </tr>
             <tr>
-              <td>Table Data</td>
+              <td></td>
               <td>Table Data</td>
               <td>Table Data</td>
               <td>Table Data</td>
@@ -230,7 +254,7 @@
               </td>
             </tr>
             <tr>
-              <td>Table Data</td>
+              <td></td>
               <td>Table Data</td>
               <td>Table Data</td>
               <td>Table Data</td>
@@ -250,11 +274,11 @@
       <p class="tips_1">TIPS (click to view) <span class="arrow">▼</span></p>
 
       <div class="betContainer_1">
-        <h1>Today's Bet Predictions</h1>
-        <table class="uk-table uk-table-hover uk-table-divider">
+        <h1>Today's Bet Predictions</h1><h1>Today's Bet Predictions</h1>
+        <table class="uk-table uk-table-hover uk-table-divider numbered-table">
           <thead>
             <tr>
-              <th>TIME</th>
+              <th>#</th>
               <th>LEAGUES</th>
               <th>TEAMS</th>
               <th>TIPS</th>
@@ -263,21 +287,7 @@
           </thead>
           <tbody>
             <tr>
-              <td>Table Data</td>
-              <td>Table Data</td>
-              <td>Table Data</td>
-              <td>Table Data</td>
-              <td>
-                <input
-                  type="checkbox"
-                  class="readonly-checkbox"
-                  name="bet_checkbox"
-                  value="1"
-                />
-              </td>
-            </tr>
-            <tr>
-              <td>Table Data</td>
+              <td></td>
               <td>Table Data</td>
               <td>Table Data</td>
               <td>Table Data</td>
@@ -291,7 +301,21 @@
               </td>
             </tr>
             <tr>
+              <td></td>
               <td>Table Data</td>
+              <td>Table Data</td>
+              <td>Table Data</td>
+              <td>
+                <input
+                  type="checkbox"
+                  class="readonly-checkbox"
+                  name="bet_checkbox"
+                  value="1"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td></td>
               <td>Table Data</td>
               <td>Table Data</td>
               <td>Table Data</td>
@@ -312,10 +336,11 @@
 
       <div class="betContainer_2">
         <h1>Today's Bet Predictions</h1>
-        <table class="uk-table uk-table-hover uk-table-divider">
+        <h1>Today's Bet Predictions</h1>
+        <table class="uk-table uk-table-hover uk-table-divider numbered-table">
           <thead>
             <tr>
-              <th>TIME</th>
+              <th>#</th>
               <th>LEAGUES</th>
               <th>TEAMS</th>
               <th>TIPS</th>
@@ -324,21 +349,7 @@
           </thead>
           <tbody>
             <tr>
-              <td>Table Data</td>
-              <td>Table Data</td>
-              <td>Table Data</td>
-              <td>Table Data</td>
-              <td>
-                <input
-                  type="checkbox"
-                  class="readonly-checkbox"
-                  name="bet_checkbox"
-                  value="1"
-                />
-              </td>
-            </tr>
-            <tr>
-              <td>Table Data</td>
+              <td></td>
               <td>Table Data</td>
               <td>Table Data</td>
               <td>Table Data</td>
@@ -352,7 +363,21 @@
               </td>
             </tr>
             <tr>
+              <td></td>
               <td>Table Data</td>
+              <td>Table Data</td>
+              <td>Table Data</td>
+              <td>
+                <input
+                  type="checkbox"
+                  class="readonly-checkbox"
+                  name="bet_checkbox"
+                  value="1"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td></td>
               <td>Table Data</td>
               <td>Table Data</td>
               <td>Table Data</td>
@@ -373,10 +398,10 @@
 
       <div class="betContainer_3">
         <h1>Today's Bet Predictions</h1>
-        <table class="uk-table uk-table-hover uk-table-divider">
+        <table class="uk-table uk-table-hover uk-table-divider numbered-table">
           <thead>
             <tr>
-              <th>TIME</th>
+              <th>#</th>
               <th>LEAGUES</th>
               <th>TEAMS</th>
               <th>TIPS</th>
@@ -385,21 +410,7 @@
           </thead>
           <tbody>
             <tr>
-              <td>Table Data</td>
-              <td>Table Data</td>
-              <td>Table Data</td>
-              <td>Table Data</td>
-              <td>
-                <input
-                  type="checkbox"
-                  class="readonly-checkbox"
-                  name="bet_checkbox"
-                  value="1"
-                />
-              </td>
-            </tr>
-            <tr>
-              <td>Table Data</td>
+              <td></td>
               <td>Table Data</td>
               <td>Table Data</td>
               <td>Table Data</td>
@@ -413,7 +424,21 @@
               </td>
             </tr>
             <tr>
+              <td></td>
               <td>Table Data</td>
+              <td>Table Data</td>
+              <td>Table Data</td>
+              <td>
+                <input
+                  type="checkbox"
+                  class="readonly-checkbox"
+                  name="bet_checkbox"
+                  value="1"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td></td>
               <td>Table Data</td>
               <td>Table Data</td>
               <td>Table Data</td>
@@ -428,6 +453,7 @@
             </tr>
           </tbody>
         </table>
+        
       </div>
     </div>
   </div>

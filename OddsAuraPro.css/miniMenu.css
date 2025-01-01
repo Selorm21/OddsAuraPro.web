@@ -57,7 +57,7 @@
   }
 
   .predictionSection {
-    width: 90%; /* Reduce width for better fit */
+    width: 100%; /* Reduce width for better fit */
     margin-bottom: 20px;
   }
 

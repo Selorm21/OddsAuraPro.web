@@ -394,11 +394,57 @@ document.addEventListener("click", function(event) {
 
 
 
-  
+
+
+
+
+
+function updateDateTime() {
+  const dateElement = document.getElementById("date");
+  const timeElement = document.getElementById("time");
+  const now = new Date();
+
+  const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
+
+  dateElement.textContent = now.toLocaleDateString('en-US', dateOptions);
+  timeElement.textContent = now.toLocaleTimeString('en-US', timeOptions);
+}
+
+// Update the date and time every second
+setInterval(updateDateTime, 1000);
+
+// Initialize the date and time on page load
+updateDateTime();
+
+
+
+
+
+
+
+
+
+
 
   
 
+  
 
+const content = document.getElementById("bet-responsibly-content");
+    const container = document.getElementById("bet-responsibly-container");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          content.classList.add("scrolling"); // Start animation immediately
+        } else {
+          content.classList.remove("scrolling"); // Stop animation if out of view
+        }
+      });
+    });
+
+    observer.observe(container);
 
 
 

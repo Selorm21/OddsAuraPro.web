@@ -150,3 +150,34 @@
     padding: 8px;
   }
 }
+
+
+
+
+
+
+
+
+
+/* Initialize the counter for the table rows */
+.numbered-table tbody {
+  counter-reset: row-number;
+}
+
+/* Apply numbering to the first column */
+.numbered-table tbody tr td:first-child::before {
+  counter-increment: row-number;
+  content: counter(row-number);
+  display: inline-block;
+  width: 20px; /* Adjust width to align numbers properly */
+  text-align: center;
+  font-weight: bold;
+  color: #333; /* Customize color */
+}
+
+/* Optional: Style the first column for alignment */
+.numbered-table th:first-child, 
+.numbered-table td:first-child {
+  text-align: center;
+  width: 40px; /* Adjust width as needed */
+}

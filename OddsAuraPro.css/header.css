@@ -1,3 +1,59 @@
+
+
+
+
+
+
+.time-date-bar {
+  background-color: #FFD700; 
+  color: #202833;
+  text-align: center;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow */
+  z-index: 1000; /* Ensure it appears on top of other content */
+  word-wrap: break-word; /* Handle long content gracefully */
+  border-bottom: 2px solid #202833;
+  transition: all 0.5s ease; /* Smooth transitions for responsive changes */
+}
+
+/* Media query for smaller screens (e.g., phones) */
+@media (max-width: 768px) {
+  .time-date-bar {
+    font-size: 16px; /* Slightly smaller font for smaller screens */
+    padding: 8px; /* Reduce padding to save space */
+  }
+}
+
+/* Media query for very small screens (e.g., old phones, < 480px) */
+@media (max-width: 480px) {
+  .time-date-bar {
+    font-size: 14px; /* Smaller font for very small screens */
+    padding: 6px; /* Further reduce padding */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* General Styles for Desktop and Larger Screens */
 .header {
   display: grid;
@@ -57,15 +113,11 @@
   margin: 3px 0;
 }
 
-.search-bar {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-}
 
 .sitename {
   text-align: center;
   font-family: 'Gilroy-Heavy', sans-serif;
+  padding-top: 30px;
   color: white;
   height: 44px;
   line-height: 44px;
@@ -75,18 +127,6 @@
   transition: background-color 0.3s ease;
 }
 
-.searchbar {
-  text-align: center;
-  overflow: hidden;
-}
-
-.sitenameandsearchbar {
-  display: flex;
-  flex-direction: column;
-  padding-left:5%;
-  padding-right: 5%;
-  padding-bottom: 2%;
-}
 
 .Odds {
   color: #FFFFFF;
@@ -134,31 +174,34 @@
   color: #FFD700;
 }
 
+
 /* Responsive Design for Smaller Screens */
 
 /* For Tablets (screens 768px and below) */
 @media (max-width: 768px) {
   .header {
-    grid-template-columns: 1fr 1fr; /* Adjust layout to two columns for tablets */
+    display: flex;
+    align-items: center; /* Vertically center the items */
+    justify-content: space-between; /* Spread out the items evenly */
     padding: 10px;
   }
 
   .sitename {
     font-size: 28px;  /* Adjust font size for sitename on tablets */
-  }
-
-  .searchbar {
-    width: 80%;  /* Adjust search bar width */
+    flex-grow: 1; /* Allow sitename to take up the remaining space in the middle */
+    text-align: center; /* Center text */
   }
 
   .homebutton {
     font-size: 14px; /* Smaller font size for buttons on tablets */
     padding: 5%;
+    flex: 0; /* Prevent home button from expanding */
+    margin-left: 0; /* Align it left */
   }
 
   .buttons {
-    display: none; /* Hide buttons by default on small screens */
-    flex-direction: column; /* Stack the buttons vertically */
+    display: none; /* Initially hidden, can toggle visibility with JS */
+    flex-direction: column; /* Stack buttons vertically when shown */
     position: absolute;
     top: 60px;
     left: 10px;
@@ -170,7 +213,9 @@
 
   .allmenubar {
     display: block; /* Show menu button on small screens */
-    padding: 5%;
+    /* padding: 5%; */
+    /* margin-left: auto;  */
+    /* Push the menu to the right */
   }
 
   .about,
@@ -181,12 +226,8 @@
     padding: 10px;
     text-align: left;
   }
-  
-  /* Left and Right positioning for Menu button and Home button */
-  .leftside {
-    justify-content: space-between; /* Spread out items to left and right */
-    width: 100%; /* Full width */
-  }
+
+ 
 
   .homebuttonA {
     padding-top: 0; /* Adjust padding */
@@ -194,31 +235,31 @@
   }
 }
 
-
-
 /* For Mobile (screens 480px and below) */
 @media (max-width: 480px) {
   .header {
-    grid-template-columns: 1fr; /* Stack the columns in one column layout */
+    display: flex;
+    align-items: center; /* Vertically center the items */
+    justify-content: space-between; /* Spread out the items evenly */
     padding: 5px;
   }
 
   .sitename {
-    font-size: 22px;  /* Adjust font size for sitename on mobile */
-  }
-
-  .searchbar {
-    width: 90%;  /* Make search bar almost full width */
-    /* padding-left: 10px; */
+    font-size: 22px; /* Adjust font size for sitename on mobile */
+    flex-grow: 1; /* Allow sitename to take up the remaining space */
+    text-align: center; /* Center text */
   }
 
   .homebutton {
     font-size: 12px;
     padding: 5px 5px;
+    flex: 0; /* Prevent expansion */
+    margin-left: 0; /* Align it left */
   }
 
   .buttons {
     padding-left: 10px;
+    flex: 1; /* Equal space for buttons */
   }
 
   .about,
@@ -228,4 +269,16 @@
     font-size: 14px;
     padding: 4px 4px;
   }
+
+  .allmenubar {
+    display: block; /* Ensure it's visible */
+    padding: 5%;
+    margin-left: auto; /* Push the menu to the right */
+  }
 }
+
+
+
+
+
+

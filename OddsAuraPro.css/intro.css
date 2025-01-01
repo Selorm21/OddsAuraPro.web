@@ -1,29 +1,6 @@
 
 
-.time {
-  display: flex;
-  justify-content: space-between; /* Distribute space evenly between items */
-  align-items: center;            /* Vertically center the items */
-  padding: 10px;                  /* Add appropriate padding */
-}
 
-/* For smaller screens (Mobile) */
-@media (max-width: 480px) {
-  .time {
-    flex-direction: column; /* Stack items vertically */
-    gap: 10px;              /* Add spacing between stacked items */
-    padding: 5px;           /* Reduce padding */
-  }
-}
-
-
-/* For larger screens (Tablets and beyond) */
-@media (min-width: 768px) {
-  .time {
-    flex-direction: row; /* Items in a row layout for larger screens */
-    padding: 15px;        /* More padding for larger screens */
-  }
-}
 
 
 
@@ -73,232 +50,63 @@ color:#FFD700 ;
 
 
 
-/* Calendar container */
-.calendar {
-  width: 100%;  /* Adjust width as needed */
-  margin: 10px auto;  /* Centers it horizontally with space at the top and bottom */
-  margin-left: 10px;
-  margin-top: 44px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+#bet-responsibly-container {
+  width: 800px;
+  height: 300px; /* Reduced height */
+  background-color: #f7f9fc;
+  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #fff;  /* White background for the calendar */
-  text-align: center;
-  max-width: 900px; /* Limit max width for larger screens */
-}
-
-/* Calendar header */
-#calendar-header {
-  background-color:#202833 ;
-  color: white;
-  padding: 10px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 18px;
-}
-
-/* Calendar table */
-#calendar-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-#calendar-table th,
-#calendar-table td {
-  padding: 10px;
-  border: 1px solid #ddd;
-  text-align: center;
-}
-
-#calendar-table td.today {
-  background-color: #202833;
-  color: white;
-  font-weight: bold;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  /* Adjust the header font size */
-  #calendar-header {
-    font-size: 16px; /* Make font size smaller */
-  }
-
-  /* Adjust calendar table cells padding */
-  #calendar-table th,
-  #calendar-table td {
-    padding: 8px; /* Smaller padding */
-  }
-}
-
-@media (max-width: 480px) {
-  /* Further reduce font size and padding for mobile */
-  #calendar-header {
-    font-size: 14px;  /* Smaller font size for mobile */
-  }
-
-  /* Adjust calendar table cells padding */
-  #calendar-table th,
-  #calendar-table td {
-    padding: 10px;
-    border: 1px solid #ddd;
-    text-align: center;
-  }
-  
-  /* Hover effect for calendar table cells */
-  #calendar-table td:hover {
-    background-color: #f1f1f1;
-    cursor: pointer;
-  }
-  
-  
-  /* Adjust calendar margins */
-  .calendar {
-    margin-top: 20px; /* Reduce top margin */
-    margin-left: 5px; /* Reduce left margin */
-    margin-right: 5px; /* Reduce right margin */
-  }
-}
-
-
-/* Clock container */
-.clock-container {
-  display: flex;
-  flex-direction: column;
-  padding-left: 30px;
-  padding-bottom: 30px;
-  text-align: center;
-  align-items: center;
-  margin: 0 auto;
-}
-
-/* Clock circle */
-.clock {
+  overflow: hidden;
   position: relative;
-  width: 150px;
-  height: 150px;
-  border: 8px solid #202833;
-  border-radius: 50%;
-  background: radial-gradient(circle, #ffffff, #e0e0e0);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5), inset 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Clock center dot */
-.clock::after {
-  content: '';
+#bet-responsibly-content {
   position: absolute;
-  width: 8px;
-  height: 8px;
-  background: #202833;
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
+  width: 100%;
+  transform: translateY(100%); /* Start at the bottom of the container */
+  animation: none;
 }
 
-/* Number positioning */
-.number {
-  position: absolute;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  font-weight: bold;
-  color: #202833;
+/* Scrolling animation */
+.scrolling {
+  animation: scroll-up 10s linear infinite; /* Faster animation */
+}
+
+@keyframes scroll-up {
+  0% { transform: translateY(100%); } /* Start at the bottom */
+  100% { transform: translateY(-100%); } /* Scroll to the top */
+}
+
+h2 {
+  color: #2c3e50;
   text-align: center;
-  transform: translate(-50%, -50%);
+  margin-top: 10px;
 }
 
-/* Adjusted Numbers */
-.number:nth-child(1) { top: 12%; left: 50%; }
-.number:nth-child(2) { top: 25%; left: 82%; }
-.number:nth-child(3) { top: 50%; left: 88%; }
-.number:nth-child(4) { top: 75%; left: 82%; }
-.number:nth-child(5) { top: 88%; left: 50%; }
-.number:nth-child(6) { top: 75%; left: 18%; }
-.number:nth-child(7) { top: 50%; left: 12%; }
-.number:nth-child(8) { top: 25%; left: 18%; }
-
-/* Clock hands */
-.hour-hand, .minute-hand, .second-hand {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform-origin: 0% 50%;
-  border-radius: 2px;
+h3 {
+  color: #34495e;
+  margin-top: 15px;
 }
 
-.hour-hand {
-  width: 25%;
-  height: 4px;
-  background-color: #333;
+p, ul {
+  color: #333;
+  margin-left: 20px;
+  line-height: 1.6;
 }
 
-.minute-hand {
-  width: 35%;
-  height: 3px;
-  background-color: #555;
+ul {
+  margin-top: 10px;
 }
 
-.second-hand {
-  width: 40%;
-  height: 2px;
-  background-color: red;
+ul li {
+  margin-bottom: 10px;
 }
 
-/* Digital clock styling */
-.digital-clock {
-  margin-top: 20px;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 20px;
-  font-weight: bolder;
-  color: #FFD700;
-  border: solid;
+a {
+  color: #3498db;
+  text-decoration: none;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .clock {
-    width: 120px;
-    height: 120px;
-  }
-
-  /* Smaller font size for clock numbers */
-  .number {
-    font-size: 12px;
-  }
-
-  /* Adjust digital clock size */
-  .digital-clock {
-    font-size: 18px;
-  }
+a:hover {
+  text-decoration: underline;
 }
-
-@media (max-width: 480px) {
-  .clock {
-    width: 100px;
-    height: 100px;
-  }
-
-  /* Further reduce font size for clock numbers */
-  .number {
-    font-size: 10px;
-  }
-
-  /* Further adjust digital clock size */
-  .digital-clock {
-    font-size: 16px;
-  }
-}
-
-.digital-clock {
-  margin-top: 20px;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 20px;
-  font-weight: bolder;
-  color: #FFD700;
-  border: solid;
-  padding: 5px; /* Add padding for better spacing */
-}
-
-
-
