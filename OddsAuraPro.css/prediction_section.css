@@ -1,0 +1,337 @@
+.all_predictions {
+  display: flex;
+  align-items: flex-start; /* Align at the top */
+  gap: 20px; /* Space between the blocks */
+  flex-wrap: wrap; /* Wrap items on smaller screens */
+}
+
+/* General prediction section layout */
+.predictionSection {
+  display: inline-block;
+  margin-bottom: 15px;
+  padding: 10px;
+  width: 70%; /* Takes up 70% width by default */
+  height: auto; /* Adjust height dynamically */
+  box-sizing: border-box;
+}
+
+/* Mini Menu container styling */
+.miniMenu {
+  display: inline-block;
+  background-color: #fff;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /* text-align: center; */
+  border-radius: 20px;
+  width: 100%; /* Takes full width by default */
+  height: 65px;
+  box-shadow: 6px 6px 6px gray;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Mini menu caption styling */
+.miniMenuCaption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-weight: 600;
+  font-family: 'Noto Sans', Helvetica, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.arrow {
+  font-size: 15px;
+  margin-left: 7px;
+}
+
+/* Responsive Styles */
+
+/* For tablet screens (width <= 768px) */
+@media (max-width: 768px) {
+  .all_predictions {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align items */
+  }
+
+  .predictionSection {
+    width: 100%; /* Reduce width for better fit */
+    margin-bottom: 20px;
+  }
+
+  .miniMenu {
+    width: 100%; /* Full-width menu */
+    margin-left: 0;
+  }
+
+  .miniMenuCaption {
+    font-size: 16px; /* Adjust font size */
+  }
+}
+
+/* For mobile screens (width <= 480px) */
+@media (max-width: 480px) {
+  .predictionSection {
+    width: 100%; /* Full width on small screens */
+    padding: 8px; /* Reduce padding for better fit */
+  }
+
+  .miniMenu {
+    height: auto; /* Adjust height dynamically */
+    padding: 8px; /* Reduce padding */
+  }
+
+  .miniMenuCaption {
+    font-size: 14px; /* Smaller font size */
+  }
+
+  .arrow {
+    font-size: 12px; /* Adjust arrow size */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* Common styles for all tips */
+.tips, .tips_1, .tips_2, .tips_3 {
+  background-color: #FFD700;
+  text-align: center;
+  font-weight: 500;
+  margin-top: 60px;
+  color: white;
+  margin-right: 20px;
+  border-radius: 5px;
+  width: 95%;
+  height: 40px;
+  box-shadow: 6px 6px 6px gray;
+  padding-top: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover and resizing effects */
+}
+
+/* Hover effect for all screen sizes */
+.tips:hover, .tips_1:hover, .tips_2:hover, .tips_3:hover {
+  background-color: #FFC107; /* Slightly lighter shade on hover */
+  box-shadow: 8px 8px 10px gray;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  /* Adjustments for tablets and smaller screens */
+  .tips, .tips_1, .tips_2, .tips_3 {
+    margin-right: 10px; /* Reduced margin */
+    padding-top: 12px;  /* Adjusted padding for smaller height */
+    font-size: 14px;    /* Smaller font size for readability */
+    height: 38px;       /* Slightly reduce height for compactness */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Adjustments for very small screens (e.g., mobile phones) */
+  .tips, .tips_1, .tips_2, .tips_3 {
+    margin-top: 20px;  /* Reduce vertical spacing between elements */
+    height: 35px;      /* Further reduce height for very small screens */
+    font-size: 12px;   /* Smaller font size for optimal display */
+    margin-right: 5px; /* Further minimize margins */
+    padding-top: 10px; /* Adjust padding for reduced height */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Base styles */
+.betContainer, .betContainer_1, .betContainer_2, .betContainer_3 {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 6px 6px 6px gray;
+  max-width: 100%;
+  width: 98%;
+  position: relative;
+  transition: max-height 0.3s ease, margin 0.3s ease;
+  overflow: hidden;
+}
+
+.betContainer h1, .betContainer_1 h1, .betContainer_2 h1, .betContainer_3 h1 {
+  text-align: center;
+  font-size: 24px;
+  color: #007BFF;
+  margin-bottom: 20px;
+}
+
+.bet-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.bet-list li {
+  padding: 12px;
+  color: #333;
+  font-size: 16px;
+  border-bottom: 1px solid #ccc;
+}
+
+.bet-list li:last-child {
+  border-bottom: none;
+}
+
+.bet-list li:nth-child(odd) {
+  background-color: #e7f1ff;
+}
+
+.bet-list li:nth-child(even) {
+  background-color: #f0f8ff;
+}
+
+/* Rollover section styles */
+.rolloversection {
+  display: inline-block;
+  background-color: #fff;
+  height: auto;
+  border-radius: 20px;
+  text-align: center;
+  width: 20%;
+  margin-top: 20px;
+  margin-left: 4%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rolloversection h1 {
+  margin-top: 5px;
+  color: #007BFF;
+  font-weight: 600;
+  font-family: 'Noto Sans', Helvetica, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  
+  padding: 25px;
+  /* display: flex; */
+   /* Enables flexbox for horizontal alignment */
+
+  gap: 10px; /* Space between the text and the image */
+}
+
+
+
+
+.rollover_symbol {
+  width: 40px; /* Adjust width to fit your layout */
+  height: 40%; /* Adjust height to fit your layout */
+  object-fit: cover; /* Ensures the image scales nicely */
+}
+
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .rolloversection {
+    width: 30%;
+    margin-left: 3%;
+  }
+}
+
+@media (max-width: 992px) {
+  .rolloversection {
+    width: 40%;
+    margin-left: 2%;
+  }
+
+  .betContainer h1, .betContainer_1 h1, .betContainer_2 h1, .betContainer_3 h1 {
+    font-size: 22px;
+  }
+
+  .bet-list li {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .rolloversection {
+    width: 45%;
+    margin-left: 2%;
+  }
+
+  .betContainer h1, .betContainer_1 h1, .betContainer_2 h1, .betContainer_3 h1 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .rolloversection {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .betContainer h1, .betContainer_1 h1, .betContainer_2 h1, .betContainer_3 h1 {
+    font-size: 18px;
+  }
+
+  .bet-list li {
+    font-size: 12px;
+    padding: 8px;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* Initialize the counter for the table rows */
+.numbered-table tbody {
+  counter-reset: row-number;
+}
+
+/* Apply numbering to the first column */
+.numbered-table tbody tr td:first-child::before {
+  counter-increment: row-number;
+  content: counter(row-number);
+  display: inline-block;
+  width: 20px; /* Adjust width to align numbers properly */
+  text-align: center;
+  font-weight: bold;
+  color: #333; /* Customize color */
+}
+
+/* Optional: Style the first column for alignment */
+.numbered-table th:first-child, 
+.numbered-table td:first-child {
+  text-align: center;
+  width: 40px; /* Adjust width as needed */
+}
+
+
+
+
+
+
+
+
+
+

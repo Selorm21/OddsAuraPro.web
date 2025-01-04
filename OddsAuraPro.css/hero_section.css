@@ -1,0 +1,358 @@
+/* General Styles for Larger Screens */
+.hero-section {
+  display: flex;
+  padding: 10px;
+  background-image: url('../images/background_pic_1.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 100vh;
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  text-align: center; 
+}
+
+.hero-section .content {
+  max-width: 90%; /* Prevent the content from stretching too much */
+  font-size: 2vw; /* Use vw units to make font size responsive */
+  color: white; /* Example: text color */
+}
+
+/* Background overlay */
+.hero-section::before {
+  content: '';
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Dark overlay for better text contrast */
+  z-index: 1;
+}
+
+.hero-section > * {
+  position: relative;
+  z-index: 2;
+  margin: 0; /* Remove any margin */
+  padding: 0; /* Remove any padding */
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  width: 40%; /* Base width for larger screens */
+  height: 100%; /* Ensure height fills the container */
+  margin: auto;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  height: 100%; /* Ensure each slide takes up the full height of the container */
+}
+
+.slide img {
+  width: 100%; /* Ensure the image width is responsive */
+  height: 100%;
+  object-fit: cover; /* Maintain image aspect ratio while covering the container */
+}
+
+/* Arrows for navigation */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+  user-select: none;
+  border-radius: 3px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Dot navigation */
+.dots-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #717171;
+}
+
+/* Responsive Design */
+
+/* Tablets (768px to 991px) */
+@media (max-width: 991px) {
+  .hero-section {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  .slideshow-container {
+    width: 60%; /* Adjust slideshow width for tablets */
+    margin: 20px auto;
+  }
+
+  .prev, .next {
+    font-size: 20px; /* Reduce arrow size */
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* Mobile Phones (480px to 767px) */
+@media (max-width: 767px) {
+  .hero-section {
+    padding: 10px;
+    height: auto;
+  }
+
+  .slideshow-container {
+    width: 80%; /* Make the slideshow almost full-width */
+    margin: 15px auto;
+  }
+
+  .prev, .next {
+    font-size: 18px; /* Further reduce arrow size */
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+/* Extra Small Screens (Below 480px) */
+@media (max-width: 479px) {
+  .hero-section {
+    padding: 5px;
+    height: auto;
+  }
+
+  .slideshow-container {
+    width: 100%; /* Full width slideshow */
+    margin: 10px auto;
+  }
+
+  .prev, .next {
+    font-size: 16px; /* Smaller arrow size */
+    padding: 8px;
+  }
+
+  .dot {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+/* Styling the container */
+.bet-responsibly-container {
+  display: inline-block;
+  width: 50%; /* Default width */
+  height: 90%; /* Height of the container */
+  background-color: #202833;
+  color: #FFD700;
+  margin-left: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  overflow-y: auto; /* Enable manual scrolling */
+  overflow-x: hidden;
+  touch-action: auto; /* Allow touch gestures */
+}
+
+/* Styling the content */
+.bet-responsibly-content {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(0); /* Initial position shows the first part */
+  animation: scroll-up 40s linear infinite; /* Slow scrolling (40 seconds) */
+}
+
+/* Duplicate content to create seamless scrolling */
+.bet-responsibly-content > *:first-child {
+  position: relative;
+  background-color: #202833;
+  z-index: 1; /* Keep the first part always visible */
+}
+
+/* Custom scrollbar styling (optional) */
+.bet-responsibly-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.bet-responsibly-container::-webkit-scrollbar-thumb {
+  background: #007bff;
+  border-radius: 4px;
+}
+
+.bet-responsibly-container::-webkit-scrollbar-thumb:hover {
+  background: #0056b3;
+}
+
+/* Keyframes for scrolling */
+@keyframes scroll-up {
+  0% {
+    transform: translateY(0); /* Start from the top */
+  }
+  100% {
+    transform: translateY(-100%); /* Scroll out of view */
+  }
+}
+
+h2 {
+  color: #FFD700;
+  text-align: center;
+  margin-top: 10px;
+}
+
+h3 {
+  color: #FFD700;
+  margin-top: 15px;
+}
+
+p, ul {
+  color: aquamarine;
+  margin-left: 20px;
+  line-height: 1.6;
+}
+
+ul {
+  margin-top: 10px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Small devices (phones, portrait) */
+@media (max-width: 600px) {
+  .hero-section {
+    padding: 10px;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .bet-responsibly-container {
+    width: 100%; /* Full width for small screens */
+    margin-left: 0;
+    margin-top: 10px; /* Add some space at the top */
+    height: 250px; /* Decreased height for smaller screens */
+    overflow-y: scroll; /* Enable scrolling if content overflows */
+  }
+
+  .bet-responsibly-content {
+    animation: none;
+    overflow-y: auto; /* Allow scrolling if content overflows */
+  }
+
+  h2, h3 {
+    font-size: 1.2rem;
+  }
+
+  p, ul {
+    margin-left: 10px;
+  }
+
+  ul li {
+    font-size: 0.9rem;
+  }
+
+  .bet-responsibly-content {
+    animation-duration: 30s; /* Faster scroll for smaller screens */
+  }
+}
+
+/* Medium devices (tablets, landscape) */
+@media (max-width: 1024px) {
+  .bet-responsibly-container {
+    width: 100%; /* Full width for medium screens */
+    height: 300px; /* Adjust the height for tablets */
+  }
+
+  h2, h3 {
+    font-size: 1.5rem;
+  }
+
+  p, ul {
+    margin-left: 15px;
+  }
+
+  ul li {
+    font-size: 1rem;
+  }
+
+  .bet-responsibly-content {
+    animation-duration: 35s; /* Slightly faster scroll for tablets */
+  }
+}
+
+/* Large devices (desktops) */
+@media (min-width: 1025px) {
+  .bet-responsibly-container {
+    width: 50%; /* Default width for desktops */
+  }
+
+  h2, h3 {
+    font-size: 1.8rem;
+  }
+
+  p, ul {
+    margin-left: 20px;
+  }
+
+  ul li {
+    font-size: 1.1rem;
+  }
+
+  .bet-responsibly-content {
+    animation-duration: 40s; /* Slow scroll for large screens */
+  }
+}

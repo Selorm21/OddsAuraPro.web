@@ -1,11 +1,11 @@
 
 .body {
-background-color: grey;
-
-}
-
-html, body {
-  margin: 0;  /* Remove default margin */
-  padding: 0;  /* Remove default padding */
-  height: 100%; /* Ensure the body and HTML take up the full height */
-}
+  background-color: grey;
+  
+  }
+  
+  html, body {
+    margin: 0;  /* Remove default margin */
+    padding: 0;  /* Remove default padding */
+    height: 100%; /* Ensure the body and HTML take up the full height */
+  }

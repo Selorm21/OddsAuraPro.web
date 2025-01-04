@@ -6,17 +6,15 @@
     <title>OddsAuraPro</title>
   </head>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  />
 
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
   />
-
-  <link rel="stylesheet" href="OddsAuraPro.css/body.css" />
-
-  <link rel="stylesheet" href="OddsAuraPro.css/header.css" />
 
   <link
     rel="stylesheet"
@@ -37,80 +35,36 @@
   <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.16/dist/js/uikit.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.16/dist/js/uikit-icons.min.js"></script>
 
-  <link rel="stylesheet" href="OddsAuraPro.css/images.css" />
-
-  <link rel="stylesheet" href="OddsAuraPro.css/intro.css" />
-
-  <link rel="stylesheet" href="OddsAuraPro.css/miniMenu.css" />
-
-  <link rel="stylesheet" href="OddsAuraPro.css/tips.css" />
-
-  <link rel="stylesheet" href="OddsAuraPro.css/betlist.css" />
-
-  <link rel="stylesheet" href="OddsAuraPro.css/managerlink.css" />
-
-  <link rel="stylesheet" href="OddsAuraPro.css/statistics.css" />
-
-  <link rel="stylesheet" href="OddsAuraPro.css/contact.css" />
-
-  <link rel="stylesheet" href="OddsAuraPro.css/paymentMethod.css" />
-
-  <link rel="stylesheet" href="OddsAuraPro.css/copyright.css" />
-
   <script
     src="https://kit.fontawesome.com/a076d05399.js"
     crossorigin="anonymous"
   ></script>
 
-  
+  <link rel="stylesheet" href="OddsAuraPro.css/header.css" />
+
+  <link rel="stylesheet" href="OddsAuraPro.css/hero_section.css" />
+
+  <link rel="stylesheet" href="OddsAuraPro.css/prediction_section.css" />
+
+  <link rel="stylesheet" href="OddsAuraPro.css/bottom_section.css" />
 
   <body class="body">
-
-    <!-- <div class="date-time-bar">
-      <span id="date-time">
-        <i class="fas fa-calendar-alt"></i> <span id="date"></span>
-        <i class="fas fa-clock"></i> <span id="time"></span>
-      </span>
-    </div> -->
-
     <div class="time-date-bar" id="time-date-bar"></div>
 
-    <script>
-      function updateTime() {
-        const now = new Date();
-        const options = {
-          weekday: "long",
-          year: "numeric",
-          month: "long",
-          day: "numeric",
-        };
-        const date = now.toLocaleDateString(undefined, options);
-        const time = now.toLocaleTimeString();
-
-        document.getElementById("time-date-bar").innerText =
-          date + " | " + time;
-      }
-
-      setInterval(updateTime, 1000);
-      updateTime(); // Initialize the time when the page loads
-    </script>
-    
+    <script></script>
 
     <div class="header" id="header">
       <div class="leftside">
-        
         <div class="homebuttonA">
           <button class="homebutton"><i class="fa fa-home"></i> Home</button>
         </div>
       </div>
-    
-      
-        <div class="sitename">
-          <span class="odds">Odds</span><span class="aura">Aura</span><span class="pro">Pro</span>
-        </div>
-        
-    
-    
+
+      <div class="sitename">
+        <span class="odds">Odds</span><span class="aura">Aura</span
+        ><span class="pro">Pro</span>
+      </div>
+
       <div class="buttons" id="buttons">
         <button class="about">ABOUT US</button>
         <button class="vip">VIP PAGE</button>
@@ -123,9 +77,8 @@
         <div class="menubar"></div>
         <div class="menubar"></div>
       </div>
-
+      <script src="scripts/header.js"></script>
     </div>
-    
 
     <div class="hero-section">
       <div class="slideshow-container">
@@ -153,138 +106,387 @@
         </div>
       </div>
 
-      <div class="bet-responsibly-container " >
-        <div class="bet-responsibly-content" id="bet-responsibly-content">
-         
-          <h2 style="color: #2c3e50; text-align: center;">Bet Responsibly</h2>
-          <p>Betting is an exciting way to add a thrill to your favorite games, but it’s important to do so responsibly. Follow these tips to maintain a safe and enjoyable betting experience:</p>
-          
-          <h3 >Guidelines for Responsible Betting</h3>
-          <ul >
-            <li><strong>Only bet what you can afford to lose:</strong> Treat any money spent on betting as part of your entertainment budget.</li>
-            <li><strong>Set limits on your time and spending:</strong> Decide in advance how much time and money you are willing to dedicate to betting.</li>
-            <li><strong>Never chase losses:</strong> Accept that losing is part of the experience and avoid the temptation to recover losses by betting more.</li>
-            <li><strong>Bet for entertainment, not as a source of income:</strong> Always treat betting as a hobby, not as a way to make money.</li>
+      <div class="bet-responsibly-container">
+        <div class="bet-responsibly-content">
+          <h2 style="color: #2c3e50; text-align: center">Bet Responsibly</h2>
+          <p>
+            Betting is an exciting way to add a thrill to your favorite games,
+            but it’s important to do so responsibly. Follow these tips to
+            maintain a safe and enjoyable betting experience:
+          </p>
+
+          <h3>Guidelines for Responsible Betting</h3>
+          <ul>
+            <li>
+              <strong>Only bet what you can afford to lose:</strong> Treat any
+              money spent on betting as part of your entertainment budget.
+            </li>
+            <li>
+              <strong>Set limits on your time and spending:</strong> Decide in
+              advance how much time and money you are willing to dedicate to
+              betting.
+            </li>
+            <li>
+              <strong>Never chase losses:</strong> Accept that losing is part of
+              the experience and avoid the temptation to recover losses by
+              betting more.
+            </li>
+            <li>
+              <strong>Bet for entertainment, not as a source of income:</strong>
+              Always treat betting as a hobby, not as a way to make money.
+            </li>
           </ul>
-        
-          <h3 >Self-Assessment Questions</h3>
+
+          <h3>Self-Assessment Questions</h3>
           <p>Ask yourself these questions to evaluate your betting habits:</p>
-          <ul >
+          <ul>
             <li>Do you ever spend more on betting than you intended?</li>
-            <li>Does betting interfere with your daily responsibilities or relationships?</li>
-            <li>Have you borrowed money or sold possessions to fund your bets?</li>
-            <li>Do you feel anxious, stressed, or guilty about your betting habits?</li>
+            <li>
+              Does betting interfere with your daily responsibilities or
+              relationships?
+            </li>
+            <li>
+              Have you borrowed money or sold possessions to fund your bets?
+            </li>
+            <li>
+              Do you feel anxious, stressed, or guilty about your betting
+              habits?
+            </li>
           </ul>
-          <p>If you answered "yes" to any of these questions, consider seeking help from a professional organization.</p>
-        
-          <h3 >Resources for Support</h3>
-          <p>If you or someone you know needs help, reach out to these trusted organizations:</p>
-          <ul >
-            <li><a href="https://www.gamblersanonymous.org" target="_blank" >Gamblers Anonymous</a>: Find support groups and resources.</li>
-            <li><strong>National Gambling Helpline:</strong> Call <a href="tel:18004262537">1-800-GAMBLER</a> (1-800-426-2537) for confidential assistance.</li>
-            <li>Check for local resources in your region for additional support.</li>
+          <p>
+            If you answered "yes" to any of these questions, consider seeking
+            help from a professional organization.
+          </p>
+
+          <h3>Resources for Support</h3>
+          <p>
+            If you or someone you know needs help, reach out to these trusted
+            organizations:
+          </p>
+          <ul>
+            <li>
+              <a href="https://www.gamblersanonymous.org" target="_blank"
+                >Gamblers Anonymous</a
+              >: Find support groups and resources.
+            </li>
+            <li>
+              <strong>National Gambling Helpline:</strong> Call
+              <a href="tel:18004262537">1-800-GAMBLER</a> (1-800-426-2537) for
+              confidential assistance.
+            </li>
+            <li>
+              Check for local resources in your region for additional support.
+            </li>
           </ul>
-        
-          <h3 >Legal Age Warning</h3>
-          <p>Betting is only allowed for individuals above the legal gambling age in your jurisdiction. Ensure you comply with these laws before participating in any betting activities.</p>
-        
-          <h3 >Disclaimer</h3>
-          <p>This website provides betting predictions and tips for entertainment purposes only. There are no guarantees of success, and betting carries inherent risks. Please bet responsibly.</p>
-        </section>
-       
+
+          <h3>Legal Age Warning</h3>
+          <p>
+            Betting is only allowed for individuals above the legal gambling age
+            in your jurisdiction. Ensure you comply with these laws before
+            participating in any betting activities.
+          </p>
+
+          <h3>Disclaimer</h3>
+          <p>
+            This website provides betting predictions and tips for entertainment
+            purposes only. There are no guarantees of success, and betting
+            carries inherent risks. Please bet responsibly.
+          </p>
         </div>
-     
-       
-        
-
       </div>
     </div>
-<div class="all_predictions">
-  <div class="predictionSection">
-    <div class="miniMenu">
-      <div class="miniMenuCaption">OddsAuraPro BETTING TIPS</div>
 
-      <p class="tips">TIPS (click to view) <span class="arrow">▼</span></p>
+    <script src="scripts/hero_section.js"></script>
 
-      <div class="betContainer">
-        <h1>Today's Bet Predictions</h1><h1>Today's Bet Predictions</h1>
-        <table class="uk-table uk-table-hover uk-table-divider numbered-table">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>LEAGUES</th>
-              <th>TEAMS</th>
-              <th>TIPS</th>
-              <th>RESULTS</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td></td>
-              <td>Table Data</td>
-              <td>Table Data</td>
-              <td>Table Data</td>
-              <td>
-                <input
-                  type="checkbox"
-                  class="readonly-checkbox"
-                  name="bet_checkbox"
-                  value="1"
-                />
-              </td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>Table Data</td>
-              <td>Table Data</td>
-              <td>Table Data</td>
-              <td>
-                <input
-                  type="checkbox"
-                  class="readonly-checkbox"
-                  name="bet_checkbox"
-                  value="1"
-                />
-              </td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>Table Data</td>
-              <td>Table Data</td>
-              <td>Table Data</td>
-              <td>
-                <input
-                  type="checkbox"
-                  class="readonly-checkbox"
-                  name="bet_checkbox"
-                  value="1"
-                />
-              </td>
-            </tr>
-          </tbody>
-        </table>
+    <div class="all_predictions">
+      <div class="predictionSection">
+        <div class="miniMenu">
+          <div class="miniMenuCaption">OddsAuraPro BETTING TIPS</div>
+
+          <p class="tips">TIPS (click to view) <span class="arrow">▼</span></p>
+
+          <div class="betContainer">
+            <h1>Today's Bet Predictions</h1>
+            <h1>Today's Bet Predictions</h1>
+            <table
+              class="uk-table uk-table-hover uk-table-divider numbered-table"
+            >
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>LEAGUES</th>
+                  <th>TEAMS</th>
+                  <th>TIPS</th>
+                  <th>RESULTS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td>Table Data</td>
+                  <td>Table Data</td>
+                  <td>Table Data</td>
+                  <td>
+                    <input
+                      type="checkbox"
+                      class="readonly-checkbox"
+                      name="bet_checkbox"
+                      value="1"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Table Data</td>
+                  <td>Table Data</td>
+                  <td>Table Data</td>
+                  <td>
+                    <input
+                      type="checkbox"
+                      class="readonly-checkbox"
+                      name="bet_checkbox"
+                      value="1"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Table Data</td>
+                  <td>Table Data</td>
+                  <td>Table Data</td>
+                  <td>
+                    <input
+                      type="checkbox"
+                      class="readonly-checkbox"
+                      name="bet_checkbox"
+                      value="1"
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="tips_1">
+            TIPS (click to view) <span class="arrow">▼</span>
+          </p>
+
+          <div class="betContainer_1">
+            <h1>Today's Bet Predictions</h1>
+            <h1>Today's Bet Predictions</h1>
+            <table
+              class="uk-table uk-table-hover uk-table-divider numbered-table"
+            >
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>LEAGUES</th>
+                  <th>TEAMS</th>
+                  <th>TIPS</th>
+                  <th>RESULTS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td>Table Data</td>
+                  <td>Table Data</td>
+                  <td>Table Data</td>
+                  <td>
+                    <input
+                      type="checkbox"
+                      class="readonly-checkbox"
+                      name="bet_checkbox"
+                      value="1"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Table Data</td>
+                  <td>Table Data</td>
+                  <td>Table Data</td>
+                  <td>
+                    <input
+                      type="checkbox"
+                      class="readonly-checkbox"
+                      name="bet_checkbox"
+                      value="1"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Table Data</td>
+                  <td>Table Data</td>
+                  <td>Table Data</td>
+                  <td>
+                    <input
+                      type="checkbox"
+                      class="readonly-checkbox"
+                      name="bet_checkbox"
+                      value="1"
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="tips_2">
+            TIPS (click to view) <span class="arrow">▼</span>
+          </p>
+
+          <div class="betContainer_2">
+            <h1>Today's Bet Predictions</h1>
+            <h1>Today's Bet Predictions</h1>
+            <table
+              class="uk-table uk-table-hover uk-table-divider numbered-table"
+            >
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>LEAGUES</th>
+                  <th>TEAMS</th>
+                  <th>TIPS</th>
+                  <th>RESULTS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td>Table Data</td>
+                  <td>Table Data</td>
+                  <td>Table Data</td>
+                  <td>
+                    <input
+                      type="checkbox"
+                      class="readonly-checkbox"
+                      name="bet_checkbox"
+                      value="1"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Table Data</td>
+                  <td>Table Data</td>
+                  <td>Table Data</td>
+                  <td>
+                    <input
+                      type="checkbox"
+                      class="readonly-checkbox"
+                      name="bet_checkbox"
+                      value="1"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Table Data</td>
+                  <td>Table Data</td>
+                  <td>Table Data</td>
+                  <td>
+                    <input
+                      type="checkbox"
+                      class="readonly-checkbox"
+                      name="bet_checkbox"
+                      value="1"
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="tips_3">
+            TIPS (click to view) <span class="arrow">▼</span>
+          </p>
+
+          <div class="betContainer_3">
+            <h1>Today's Bet Predictions</h1>
+            <table
+              class="uk-table uk-table-hover uk-table-divider numbered-table"
+            >
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>LEAGUES</th>
+                  <th>TEAMS</th>
+                  <th>TIPS</th>
+                  <th>RESULTS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td>Table Data</td>
+                  <td>Table Data</td>
+                  <td>Table Data</td>
+                  <td>
+                    <input
+                      type="checkbox"
+                      class="readonly-checkbox"
+                      name="bet_checkbox"
+                      value="1"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Table Data</td>
+                  <td>Table Data</td>
+                  <td>Table Data</td>
+                  <td>
+                    <input
+                      type="checkbox"
+                      class="readonly-checkbox"
+                      name="bet_checkbox"
+                      value="1"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Table Data</td>
+                  <td>Table Data</td>
+                  <td>Table Data</td>
+                  <td>
+                    <input
+                      type="checkbox"
+                      class="readonly-checkbox"
+                      name="bet_checkbox"
+                      value="1"
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
 
-      <p class="tips_1">TIPS (click to view) <span class="arrow">▼</span></p>
-
-      <div class="betContainer_1">
-        <h1>Today's Bet Predictions</h1><h1>Today's Bet Predictions</h1>
-        <table class="uk-table uk-table-hover uk-table-divider numbered-table">
+      <div class="rolloversection">
+        <h1 style="font-size: 20px">
+          RollOver DailY_21 <br />
+          <img
+            src="images/rollover_symbol.png"
+            alt="RollOver"
+            class="rollover_symbol"
+          />
+        </h1>
+        <table class="uk-table uk-table-hover uk-table-divider">
           <thead>
             <tr>
-              <th>#</th>
-              <th>LEAGUES</th>
-              <th>TEAMS</th>
-              <th>TIPS</th>
-              <th>RESULTS</th>
+              <th>DaY</th>
+              <th>Booking <br />Code</th>
+              <th>Result</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td></td>
-              <td>Table Data</td>
-              <td>Table Data</td>
-              <td>Table Data</td>
+              <td>1.</td>
+              <td>------</td>
               <td>
                 <input
                   type="checkbox"
@@ -295,435 +497,251 @@
               </td>
             </tr>
             <tr>
-              <td></td>
-              <td>Table Data</td>
-              <td>Table Data</td>
-              <td>Table Data</td>
+              <td>2.</td>
+              <td>------</td>
               <td>
                 <input
                   type="checkbox"
                   class="readonly-checkbox"
                   name="bet_checkbox"
-                  value="1"
+                  value="2"
                 />
               </td>
             </tr>
             <tr>
-              <td></td>
-              <td>Table Data</td>
-              <td>Table Data</td>
-              <td>Table Data</td>
+              <td>3.</td>
+              <td>------</td>
               <td>
                 <input
                   type="checkbox"
                   class="readonly-checkbox"
                   name="bet_checkbox"
-                  value="1"
+                  value="3"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>4.</td>
+              <td>------</td>
+              <td>
+                <input
+                  type="checkbox"
+                  class="readonly-checkbox"
+                  name="bet_checkbox"
+                  value="4"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>5.</td>
+              <td>------</td>
+              <td>
+                <input
+                  type="checkbox"
+                  class="readonly-checkbox"
+                  name="bet_checkbox"
+                  value="5"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>6.</td>
+              <td>------</td>
+              <td>
+                <input
+                  type="checkbox"
+                  class="readonly-checkbox"
+                  name="bet_checkbox"
+                  value="6"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>7.</td>
+              <td>------</td>
+              <td>
+                <input
+                  type="checkbox"
+                  class="readonly-checkbox"
+                  name="bet_checkbox"
+                  value="7"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>8.</td>
+              <td>------</td>
+              <td>
+                <input
+                  type="checkbox"
+                  class="readonly-checkbox"
+                  name="bet_checkbox"
+                  value="8"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>9.</td>
+              <td>------</td>
+              <td>
+                <input
+                  type="checkbox"
+                  class="readonly-checkbox"
+                  name="bet_checkbox"
+                  value="9"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>10.</td>
+              <td>------</td>
+              <td>
+                <input
+                  type="checkbox"
+                  class="readonly-checkbox"
+                  name="bet_checkbox"
+                  value="10"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>11.</td>
+              <td>------</td>
+              <td>
+                <input
+                  type="checkbox"
+                  class="readonly-checkbox"
+                  name="bet_checkbox"
+                  value="11"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>12.</td>
+              <td>------</td>
+              <td>
+                <input
+                  type="checkbox"
+                  class="readonly-checkbox"
+                  name="bet_checkbox"
+                  value="12"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>13.</td>
+              <td>------</td>
+              <td>
+                <input
+                  type="checkbox"
+                  class="readonly-checkbox"
+                  name="bet_checkbox"
+                  value="13"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>14.</td>
+              <td>------</td>
+              <td>
+                <input
+                  type="checkbox"
+                  class="readonly-checkbox"
+                  name="bet_checkbox"
+                  value="14"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>15.</td>
+              <td>------</td>
+              <td>
+                <input
+                  type="checkbox"
+                  class="readonly-checkbox"
+                  name="bet_checkbox"
+                  value="15"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>16.</td>
+              <td>------</td>
+              <td>
+                <input
+                  type="checkbox"
+                  class="readonly-checkbox"
+                  name="bet_checkbox"
+                  value="15"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>17.</td>
+              <td>------</td>
+              <td>
+                <input
+                  type="checkbox"
+                  class="readonly-checkbox"
+                  name="bet_checkbox"
+                  value="15"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>18.</td>
+              <td>------</td>
+              <td>
+                <input
+                  type="checkbox"
+                  class="readonly-checkbox"
+                  name="bet_checkbox"
+                  value="15"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>19.</td>
+              <td>------</td>
+              <td>
+                <input
+                  type="checkbox"
+                  class="readonly-checkbox"
+                  name="bet_checkbox"
+                  value="15"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>20.</td>
+              <td>------</td>
+              <td>
+                <input
+                  type="checkbox"
+                  class="readonly-checkbox"
+                  name="bet_checkbox"
+                  value="15"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>21.</td>
+              <td>------</td>
+              <td>
+                <input
+                  type="checkbox"
+                  class="readonly-checkbox"
+                  name="bet_checkbox"
+                  value="15"
                 />
               </td>
             </tr>
           </tbody>
         </table>
-      </div>
-
-      <p class="tips_2">TIPS (click to view) <span class="arrow">▼</span></p>
-
-      <div class="betContainer_2">
-        <h1>Today's Bet Predictions</h1>
-        <h1>Today's Bet Predictions</h1>
-        <table class="uk-table uk-table-hover uk-table-divider numbered-table">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>LEAGUES</th>
-              <th>TEAMS</th>
-              <th>TIPS</th>
-              <th>RESULTS</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td></td>
-              <td>Table Data</td>
-              <td>Table Data</td>
-              <td>Table Data</td>
-              <td>
-                <input
-                  type="checkbox"
-                  class="readonly-checkbox"
-                  name="bet_checkbox"
-                  value="1"
-                />
-              </td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>Table Data</td>
-              <td>Table Data</td>
-              <td>Table Data</td>
-              <td>
-                <input
-                  type="checkbox"
-                  class="readonly-checkbox"
-                  name="bet_checkbox"
-                  value="1"
-                />
-              </td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>Table Data</td>
-              <td>Table Data</td>
-              <td>Table Data</td>
-              <td>
-                <input
-                  type="checkbox"
-                  class="readonly-checkbox"
-                  name="bet_checkbox"
-                  value="1"
-                />
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <p class="tips_3">TIPS (click to view) <span class="arrow">▼</span></p>
-
-      <div class="betContainer_3">
-        <h1>Today's Bet Predictions</h1>
-        <table class="uk-table uk-table-hover uk-table-divider numbered-table">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>LEAGUES</th>
-              <th>TEAMS</th>
-              <th>TIPS</th>
-              <th>RESULTS</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td></td>
-              <td>Table Data</td>
-              <td>Table Data</td>
-              <td>Table Data</td>
-              <td>
-                <input
-                  type="checkbox"
-                  class="readonly-checkbox"
-                  name="bet_checkbox"
-                  value="1"
-                />
-              </td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>Table Data</td>
-              <td>Table Data</td>
-              <td>Table Data</td>
-              <td>
-                <input
-                  type="checkbox"
-                  class="readonly-checkbox"
-                  name="bet_checkbox"
-                  value="1"
-                />
-              </td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>Table Data</td>
-              <td>Table Data</td>
-              <td>Table Data</td>
-              <td>
-                <input
-                  type="checkbox"
-                  class="readonly-checkbox"
-                  name="bet_checkbox"
-                  value="1"
-                />
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        
       </div>
     </div>
-  </div>
 
-  <div class="rolloversection">
-    <h1 style="font-size: 24px">RollOver DailY &#10227</h1>
-    <table class="uk-table uk-table-hover uk-table-divider">
-      <thead>
-        <tr>
-          <th>DaY</th>
-          <th>Booking <br />Code</th>
-          <th>Result</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1.</td>
-          <td>------</td>
-          <td>
-            <input
-              type="checkbox"
-              class="readonly-checkbox"
-              name="bet_checkbox"
-              value="1"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td>2.</td>
-          <td>------</td>
-          <td>
-            <input
-              type="checkbox"
-              class="readonly-checkbox"
-              name="bet_checkbox"
-              value="2"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td>3.</td>
-          <td>------</td>
-          <td>
-            <input
-              type="checkbox"
-              class="readonly-checkbox"
-              name="bet_checkbox"
-              value="3"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td>4.</td>
-          <td>------</td>
-          <td>
-            <input
-              type="checkbox"
-              class="readonly-checkbox"
-              name="bet_checkbox"
-              value="4"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td>5.</td>
-          <td>------</td>
-          <td>
-            <input
-              type="checkbox"
-              class="readonly-checkbox"
-              name="bet_checkbox"
-              value="5"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td>6.</td>
-          <td>------</td>
-          <td>
-            <input
-              type="checkbox"
-              class="readonly-checkbox"
-              name="bet_checkbox"
-              value="6"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td>7.</td>
-          <td>------</td>
-          <td>
-            <input
-              type="checkbox"
-              class="readonly-checkbox"
-              name="bet_checkbox"
-              value="7"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td>8.</td>
-          <td>------</td>
-          <td>
-            <input
-              type="checkbox"
-              class="readonly-checkbox"
-              name="bet_checkbox"
-              value="8"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td>9.</td>
-          <td>------</td>
-          <td>
-            <input
-              type="checkbox"
-              class="readonly-checkbox"
-              name="bet_checkbox"
-              value="9"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td>10.</td>
-          <td>------</td>
-          <td>
-            <input
-              type="checkbox"
-              class="readonly-checkbox"
-              name="bet_checkbox"
-              value="10"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td>11.</td>
-          <td>------</td>
-          <td>
-            <input
-              type="checkbox"
-              class="readonly-checkbox"
-              name="bet_checkbox"
-              value="11"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td>12.</td>
-          <td>------</td>
-          <td>
-            <input
-              type="checkbox"
-              class="readonly-checkbox"
-              name="bet_checkbox"
-              value="12"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td>13.</td>
-          <td>------</td>
-          <td>
-            <input
-              type="checkbox"
-              class="readonly-checkbox"
-              name="bet_checkbox"
-              value="13"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td>14.</td>
-          <td>------</td>
-          <td>
-            <input
-              type="checkbox"
-              class="readonly-checkbox"
-              name="bet_checkbox"
-              value="14"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td>15.</td>
-          <td>------</td>
-          <td>
-            <input
-              type="checkbox"
-              class="readonly-checkbox"
-              name="bet_checkbox"
-              value="15"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td>16.</td>
-          <td>------</td>
-          <td>
-            <input
-              type="checkbox"
-              class="readonly-checkbox"
-              name="bet_checkbox"
-              value="15"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td>17.</td>
-          <td>------</td>
-          <td>
-            <input
-              type="checkbox"
-              class="readonly-checkbox"
-              name="bet_checkbox"
-              value="15"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td>18.</td>
-          <td>------</td>
-          <td>
-            <input
-              type="checkbox"
-              class="readonly-checkbox"
-              name="bet_checkbox"
-              value="15"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td>19.</td>
-          <td>------</td>
-          <td>
-            <input
-              type="checkbox"
-              class="readonly-checkbox"
-              name="bet_checkbox"
-              value="15"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td>20.</td>
-          <td>------</td>
-          <td>
-            <input
-              type="checkbox"
-              class="readonly-checkbox"
-              name="bet_checkbox"
-              value="15"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td>21.</td>
-          <td>------</td>
-          <td>
-            <input
-              type="checkbox"
-              class="readonly-checkbox"
-              name="bet_checkbox"
-              value="15"
-            />
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-</div>
-
-   
-
-    <script src="scripts/dropList.js"></script>
+    <script src="scripts/prediction_section.js"></script>
 
     <div class="bottom">
       <div class="statistics">
@@ -776,5 +794,7 @@
         <span class="terms"> :Terms & Conditions </span>
       </div>
     </div>
+
+    <script src="scripts/bottom_section.js"></script>
   </body>
 </html>
