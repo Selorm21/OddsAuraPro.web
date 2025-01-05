@@ -11,7 +11,7 @@
   background-position: center;
   color: greenyellow;
   text-align: center;
-  height: 150px;                     /* You can adjust this height as needed */
+  height: 100px;                     /* You can adjust this height as needed */
   display: flex;                     /* Removed duplicate declaration */
 }
 
@@ -94,7 +94,7 @@
   background-position: center;
   color: greenyellow;
   text-align: center;
-  height: 150px;
+  height: 100px;
 }
 
 /* Font Awesome Hover Effects */
@@ -114,7 +114,7 @@
   display: inline-block;
   background: #383838;
   color: #ccc;
-  padding: 20px;
+  padding: 5px;
   font-size: 25px;
   width: 40px;
   height: 40px;
@@ -189,7 +189,7 @@
   }
 
   .fa {
-    font-size: 15px; /* Reduce icon size */
+    font-size: 25px; /* Reduce icon size */
   }
 }
 
@@ -203,7 +203,7 @@
   }
 
   .fa {
-    font-size: 10px; /* Even smaller icons for mobile */
+    font-size: 20px; /* Even smaller icons for mobile */
   }
 }
 
