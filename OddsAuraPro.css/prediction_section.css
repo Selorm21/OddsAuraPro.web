@@ -19,7 +19,7 @@
 .miniMenu {
   display: inline-block;
   background-color: #fff;
-  margin-top: 20px;
+  margin-top: 16px;
   margin-bottom: 20px;
   /* text-align: center; */
   border-radius: 20px;
@@ -175,124 +175,99 @@
 .betContainer h1, .betContainer_1 h1, .betContainer_2 h1, .betContainer_3 h1 {
   text-align: center;
   font-size: 24px;
-  color: #007BFF;
+  color: gray;
   margin-bottom: 20px;
+  font-weight: bold;
 }
 
-.bet-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.fa-copy {
+  font-size: 24px;
+  color: #202833;
+  background-color: #f9f9f9;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.bet-list li {
-  padding: 12px;
-  color: #333;
-  font-size: 16px;
-  border-bottom: 1px solid #ccc;
-}
 
-.bet-list li:last-child {
-  border-bottom: none;
-}
+  .popup-message {
+    display: none; /* Initially hidden */
+    position: fixed; /* Position it as a floating popup */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for proper centering */
+    background-color: #202833; /* Dark background */
+    color: #fff; /* White text */
+    padding: 10px 20px; /* Add some padding */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    z-index: 1000; /* Ensure it appears above other elements */
+    font-size: 16px; /* Font size */
+    animation: fadeOut 3s ease-in-out forwards; /* Fade out effect */
+  }
 
-.bet-list li:nth-child(odd) {
-  background-color: #e7f1ff;
-}
+  @keyframes fadeOut {
+    0% {
+      opacity: 1; /* Fully visible */
+    }
+    80% {
+      opacity: 1; /* Stay visible for most of the time */
+    }
+    100% {
+      opacity: 0; /* Fully transparent at the end */
+    }
+  }
 
-.bet-list li:nth-child(even) {
-  background-color: #f0f8ff;
-}
 
-/* Rollover section styles */
-.rolloversection {
-  display: inline-block;
-  background-color: #fff;
-  height: auto;
-  border-radius: 20px;
-  text-align: center;
-  width: 20%;
-  margin-top: 20px;
-  margin-left: 4%;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
 
-.rolloversection h1 {
-  margin-top: 5px;
-  color: #007BFF;
-  font-weight: 600;
-  font-family: 'Noto Sans', Helvetica, sans-serif;
-  font-size: 20px;
+
+
+
+
+
+.numbered-table th {
+  background-color: #FFD700; /* Gold header background */
+  color: #202833; /* Dark text for contrast */
+  font-weight: bold;
+  border-radius: 5px;
   text-align: center;
   
-  padding: 25px;
-  /* display: flex; */
-   /* Enables flexbox for horizontal alignment */
-
-  gap: 10px; /* Space between the text and the image */
 }
 
 
 
 
-.rollover_symbol {
-  width: 40px; /* Adjust width to fit your layout */
-  height: 40%; /* Adjust height to fit your layout */
-  object-fit: cover; /* Ensures the image scales nicely */
+.numbered-table tr:nth-child(even) {
+  background-color: #f9f9f9; /* Light gray background for alternate rows */
+  text-align: center;
+ 
+}
+
+.numbered-table tr:nth-child(odd) {
+  background-color: #fff; /* White background for odd rows */
+  text-align: center;
+ 
 }
 
 
-/* Responsive styles */
-@media (max-width: 1200px) {
-  .rolloversection {
-    width: 30%;
-    margin-left: 3%;
-  }
+
+
+
+/* Target the 'leagues' column */
+th:nth-child(2), td:nth-child(2) {
+  width: 50px; /* Set a specific width for the results column */
+  text-align: center; /* Optional: Align content to the center */
 }
 
-@media (max-width: 992px) {
-  .rolloversection {
-    width: 40%;
-    margin-left: 2%;
-  }
 
-  .betContainer h1, .betContainer_1 h1, .betContainer_2 h1, .betContainer_3 h1 {
-    font-size: 22px;
-  }
 
-  .bet-list li {
-    font-size: 14px;
-    padding: 10px;
-  }
-}
 
-@media (max-width: 768px) {
-  .rolloversection {
-    width: 45%;
-    margin-left: 2%;
-  }
-
-  .betContainer h1, .betContainer_1 h1, .betContainer_2 h1, .betContainer_3 h1 {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 576px) {
-  .rolloversection {
-    width: 100%;
-    margin: 10px 0;
-  }
-
-  .betContainer h1, .betContainer_1 h1, .betContainer_2 h1, .betContainer_3 h1 {
-    font-size: 18px;
-  }
-
-  .bet-list li {
-    font-size: 12px;
-    padding: 8px;
-  }
+/* Target the 'RESULTS' column */
+th:nth-child(5), td:nth-child(5) {
+  width: 20px; /* Set a specific width for the results column */
+  text-align: center; /* Optional: Align content to the center */
 }
 
 
@@ -303,6 +278,43 @@
 
 
 
+  /* Responsive Font Scaling */
+  @media (max-width: 1200px) {
+    .numbered-table {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .numbered-table {
+      font-size: 0.8rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .numbered-table {
+      font-size: 0.75rem;
+    }
+    .numbered-table th,
+    .numbered-table td {
+      padding: 6px; /* Reduce padding for smaller screens */
+    }
+  }
+
+  @media (max-width: 576px) {  
+    .numbered-table {
+      font-size: 0.7rem;
+    }
+    .numbered-table th,
+    .numbered-table td {
+      padding: 4px; /* Further reduce padding for extra small screens */
+    }
+   
+  }
+
+
+
+  
 /* Initialize the counter for the table rows */
 .numbered-table tbody {
   counter-reset: row-number;
@@ -325,6 +337,196 @@
   text-align: center;
   width: 40px; /* Adjust width as needed */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Rollover section styles */
+.rolloversection {
+  display: inline-block;
+  background-color: #fff;
+  height: auto;
+  border-radius: 20px;
+  text-align: center;
+  width: 25%;
+  
+  margin-top: 20px;
+  margin-left: 2%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rolloversection h1 {
+  margin-top: 5px;
+  color: #202833;
+  font-weight: 600;
+  font-family: 'Noto Sans', Helvetica, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  
+  padding: 10px;
+  /* display: flex; */
+   /* Enables flexbox for horizontal alignment */
+
+  gap: 10px; /* Space between the text and the image */
+}
+
+
+
+
+.rollover_symbol {
+  width: 40px; /* Adjust width to fit your layout */
+  height: 40px; /* Adjust height to fit your layout */
+  object-fit: cover; /* Ensures the image scales nicely */
+}
+
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .rolloversection {
+    width: 30%;
+    margin-left: 3%;
+  }
+}
+
+@media (max-width: 992px) {
+  .rolloversection {
+    width: 40%;
+    margin-left: 2%;
+  }
+
+  .betContainer h1, .betContainer_1 h1, .betContainer_2 h1, .betContainer_3 h1 {
+    font-size: 22px;
+  }
+
+
+}
+
+@media (max-width: 768px) {
+  .rolloversection {
+    width: 45%;
+    margin-left: 2%;
+  }
+
+  .betContainer h1, .betContainer_1 h1, .betContainer_2 h1, .betContainer_3 h1 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .rolloversection {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .betContainer h1, .betContainer_1 h1, .betContainer_2 h1, .betContainer_3 h1 {
+    font-size: 16px;
+  }
+
+  
+}
+
+
+
+
+
+
+  .styled-table {
+    width: 100%; /* Full width */
+    border-collapse: collapse; /* Remove gaps between cells */
+    font-family: Arial, sans-serif; /* Clean font */
+    font-size: 16px; /* Text size */
+    text-align: left; /* Align text to the left */
+    margin: 20px 0; /* Add space above and below */
+  }
+
+  .styled-table th, 
+  .styled-table td {
+    padding: 12px 15px; /* Add padding */
+    border: 1px solid #ddd; /* Light border for cells */
+    text-align: center;
+  }
+
+  .styled-table th {
+    background-color: #202833; /* Dark header background */
+    color: #ffffff; /* White text for headers */
+    text-align: center;
+  }
+
+  .styled-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light gray background for even rows */
+  }
+
+  .styled-table tbody tr:hover {
+    background-color: #f1f1f1; /* Highlight row on hover */
+  }
+
+  .styled-table input[type="checkbox"] {
+    cursor: pointer; /* Pointer cursor for checkboxes */
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .styled-table {
+      font-size: 14px; /* Adjust text size for smaller screens */
+    }
+
+    .styled-table th, 
+    .styled-table td {
+      padding: 10px; /* Adjust padding for smaller screens */
+    }
+  }
+
+
+  .styled-table th:nth-child(3), 
+  .styled-table td:nth-child(3) {
+    width: 10px; /* Set a specific width for the Result column */
+    text-align: center; /* Optional: Center align the checkbox */
+  }
+
+  .styled-table th:nth-child(1), 
+  .styled-table td:nth-child(1) {
+    width: 10px; /* Set a specific width for the Result column */
+    text-align: center; /* Optional: Center align the checkbox */
+  }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -133,7 +133,7 @@
 }
 
 .aura {
-  color: #00C8FF;
+  color: cyan;
 }
 
 .pro {
@@ -225,6 +225,7 @@
     font-size: 14px;  /* Reduce font size for smaller buttons */
     padding: 10px;
     text-align: left;
+    display: block;
   }
 
  

@@ -60,3 +60,31 @@ document.addEventListener('click', function () {
     menu.style.display = 'none';
   });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+function copyToClipboard(copyTextId, copyMessageId) {
+  const copyText = document.getElementById(copyTextId).innerText;
+  navigator.clipboard.writeText(copyText).then(() => {
+    const message = document.getElementById(copyMessageId);
+    message.style.display = "inline";
+    setTimeout(() => {
+      message.style.display = "none";
+    }, 2000); // Hide after 2 seconds
+  });
+}
+
+
+
+
+
