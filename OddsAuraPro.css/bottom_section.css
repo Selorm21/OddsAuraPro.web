@@ -58,6 +58,7 @@
 
   .figure {
     font-size: 18px;  /* Adjust figure size */
+    font-weight: bolder;
   }
 }
 
@@ -68,6 +69,7 @@
 
   .figure {
     font-size: 16px;  /* Adjust figure size for mobile screens */
+    font-weight: bolder;
   }
 }
 
@@ -187,7 +189,7 @@
   }
 
   .fa {
-    font-size: 20px; /* Reduce icon size */
+    font-size: 15px; /* Reduce icon size */
   }
 }
 
@@ -201,7 +203,7 @@
   }
 
   .fa {
-    font-size: 15px; /* Even smaller icons for mobile */
+    font-size: 10px; /* Even smaller icons for mobile */
   }
 }
 
