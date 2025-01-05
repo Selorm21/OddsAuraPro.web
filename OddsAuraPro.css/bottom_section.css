@@ -146,13 +146,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 5px;
 }
 
 .email, .phone {
   display: flex;
   align-items: center; /* Vertically align the icons and text */
-  gap: 10px; /* Add space between icon and text */
+  gap: 5px; /* Add space between icon and text */
 }
 
 /* Text and title styling */
