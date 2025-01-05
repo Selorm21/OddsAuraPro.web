@@ -177,11 +177,12 @@
   }
 }
 
+
 /* Styling the container */
 .bet-responsibly-container {
   display: inline-block;
-  width: 50%; /* Default width */
-  height: 90%; /* Height of the container */
+  width: 50%;
+  height: 90%;
   background-color: #202833;
   color: #FFD700;
   margin-left: 10px;
@@ -201,18 +202,11 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  transform: translateY(0); /* Initial position shows the first part */
-  animation: scroll-up 40s linear infinite; /* Slow scrolling (40 seconds) */
+  transform: translateY(0);
+  animation: scroll-up 40s linear infinite; /* Automatic scroll by default */
 }
 
-/* Duplicate content to create seamless scrolling */
-.bet-responsibly-content > *:first-child {
-  position: relative;
-  background-color: #202833;
-  z-index: 1; /* Keep the first part always visible */
-}
-
-/* Custom scrollbar styling (optional) */
+/* Custom scrollbar styling */
 .bet-responsibly-container::-webkit-scrollbar {
   width: 8px;
 }
@@ -229,130 +223,65 @@
 /* Keyframes for scrolling */
 @keyframes scroll-up {
   0% {
-    transform: translateY(0); /* Start from the top */
+    transform: translateY(0);
   }
   100% {
-    transform: translateY(-100%); /* Scroll out of view */
+    transform: translateY(-100%);
   }
-}
-
-h2 {
-  color: #FFD700;
-  text-align: center;
-  margin-top: 10px;
-}
-
-h3 {
-  color: #FFD700;
-  margin-top: 15px;
-}
-
-p, ul {
-  color: aquamarine;
-  margin-left: 20px;
-  line-height: 1.6;
-}
-
-ul {
-  margin-top: 10px;
-}
-
-ul li {
-  margin-bottom: 10px;
-}
-
-a {
-  color: white;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
 }
 
 /* Media Queries for Responsiveness */
 
 /* Small devices (phones, portrait) */
 @media (max-width: 600px) {
-  .hero-section {
-    padding: 10px;
-    height: auto;
-    flex-direction: column;
-  }
-
   .bet-responsibly-container {
-    width: 100%; /* Full width for small screens */
+    width: 100%;
     margin-left: 0;
-    margin-top: 10px; /* Add some space at the top */
-    height: 250px; /* Decreased height for smaller screens */
-    overflow-y: scroll; /* Enable scrolling if content overflows */
+    margin-top: 10px;
+    height: 250px; /* Reduced height */
+    overflow-y: auto; /* Allow manual scrolling */
   }
 
   .bet-responsibly-content {
-    animation: none;
-    overflow-y: auto; /* Allow scrolling if content overflows */
+    animation: scroll-up 30s linear infinite; /* Keep animation active */
   }
 
+  /* Adjust font sizes for better readability */
   h2, h3 {
     font-size: 1.2rem;
   }
 
   p, ul {
     margin-left: 10px;
+    line-height: 1.6;
   }
 
   ul li {
     font-size: 0.9rem;
-  }
-
-  .bet-responsibly-content {
-    animation-duration: 30s; /* Faster scroll for smaller screens */
   }
 }
 
 /* Medium devices (tablets, landscape) */
 @media (max-width: 1024px) {
   .bet-responsibly-container {
-    width: 100%; /* Full width for medium screens */
-    height: 300px; /* Adjust the height for tablets */
-  }
-
-  h2, h3 {
-    font-size: 1.5rem;
-  }
-
-  p, ul {
-    margin-left: 15px;
-  }
-
-  ul li {
-    font-size: 1rem;
+    width: 100%;
+    height: 300px;
+    overflow-y: auto; /* Enable manual scrolling */
   }
 
   .bet-responsibly-content {
-    animation-duration: 35s; /* Slightly faster scroll for tablets */
+    animation: scroll-up 35s linear infinite;
   }
 }
 
 /* Large devices (desktops) */
 @media (min-width: 1025px) {
   .bet-responsibly-container {
-    width: 50%; /* Default width for desktops */
-  }
-
-  h2, h3 {
-    font-size: 1.8rem;
-  }
-
-  p, ul {
-    margin-left: 20px;
-  }
-
-  ul li {
-    font-size: 1.1rem;
+    width: 50%;
   }
 
   .bet-responsibly-content {
-    animation-duration: 40s; /* Slow scroll for large screens */
+    animation: scroll-up 40s linear infinite;
   }
 }
+

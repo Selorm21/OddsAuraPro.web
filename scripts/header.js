@@ -73,7 +73,7 @@ window.addEventListener('scroll', () => {
 
   // If the user scrolls down, hide the header
   if (currentScroll > lastScrollTop) {
-    header.style.top = '-60px';  // Hide header by moving it out of view
+    header.style.top = '-200px';  // Hide header by moving it out of view
   } else {
     header.style.top = '0';  // Show header when scrolling up
   }

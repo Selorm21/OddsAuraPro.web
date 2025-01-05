@@ -68,98 +68,95 @@ slideshowContainer.addEventListener('mouseout', startAutoSlide);
 
 
 
-
-
-
 document.addEventListener("DOMContentLoaded", () => {
   const content = document.getElementById("bet-responsibly-content");
   const container = document.getElementById("bet-responsibly-container");
 
-  // Start the automatic scroll when content is visible
+  let isManualScrolling = false; // Track manual scrolling state
+
+  // Add scrolling class for automatic scrolling when visible
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        content.classList.add("scrolling"); // Start scrolling when visible
+      if (entry.isIntersecting && !isManualScrolling) {
+        content.classList.add("scrolling");
       } else {
-        content.classList.remove("scrolling"); // Stop scrolling when not visible
+        content.classList.remove("scrolling");
       }
     });
   });
-
   observer.observe(container);
 
-  // Disable automatic scrolling during manual scrolling
-  let isManualScrolling = false;
+  // Stop automatic scrolling during manual interaction
+  const stopAutoScrolling = () => {
+    isManualScrolling = true;
+    content.classList.remove("scrolling");
+    content.style.animation = 'none'; // Remove animation during manual scroll
+  };
 
-  // For touch events (mobile)
-  let isTouching = false;
-  let startTouch = 0;
+  // Resume automatic scrolling after a delay
+  const resumeAutoScrolling = () => {
+    isManualScrolling = false;
+    content.classList.add("scrolling");
+    content.style.animation = 'scroll-up 40s linear infinite'; // Reapply animation
+  };
 
-  container.addEventListener('touchstart', (e) => {
-    isManualScrolling = true; // User has started manual scroll
-    content.classList.remove("scrolling"); // Stop automatic scrolling
-    isTouching = true;
-    startTouch = e.touches[0].clientY; // Record touch start position
+  // Touch events for manual scrolling (mobile)
+  let startTouchY = 0;
+
+  container.addEventListener("touchstart", (e) => {
+    stopAutoScrolling();
+    startTouchY = e.touches[0].clientY;
   });
 
-  container.addEventListener('touchmove', (e) => {
-    if (!isTouching) return;
-    const touchDiff = e.touches[0].clientY - startTouch; // Calculate the difference
-    container.scrollTop -= touchDiff; // Adjust scroll position
-    startTouch = e.touches[0].clientY; // Update start position for smooth scrolling
+  container.addEventListener("touchmove", (e) => {
+    const touchDiff = startTouchY - e.touches[0].clientY;
+    container.scrollTop += touchDiff;
+    startTouchY = e.touches[0].clientY;
   });
 
-  container.addEventListener('touchend', () => {
-    isTouching = false; // Stop scrolling after touch ends
-    isManualScrolling = false; // Reset manual scroll flag
-    content.classList.add("scrolling"); // Re-enable automatic scrolling
+  container.addEventListener("touchend", () => {
+    setTimeout(resumeAutoScrolling, 500); // Resume after delay
   });
 
-  // For mouse events (desktop)
+  // Mouse events for manual scrolling (desktop)
   let isMouseDown = false;
-  let mouseStart = 0;
+  let startMouseY = 0;
 
-  container.addEventListener('mousedown', (e) => {
-    isManualScrolling = true; // User has started manual scroll
-    content.classList.remove("scrolling"); // Stop automatic scrolling
+  container.addEventListener("mousedown", (e) => {
     isMouseDown = true;
-    mouseStart = e.clientY; // Record mouse position
+    stopAutoScrolling();
+    startMouseY = e.clientY;
   });
 
-  container.addEventListener('mousemove', (e) => {
+  container.addEventListener("mousemove", (e) => {
     if (!isMouseDown) return;
-    const mouseDiff = e.clientY - mouseStart; // Calculate the difference
-    container.scrollTop -= mouseDiff; // Adjust scroll position
-    mouseStart = e.clientY; // Update mouse position
+
+    const mouseDiff = startMouseY - e.clientY;
+    container.scrollTop += mouseDiff;
+    startMouseY = e.clientY;
   });
 
-  container.addEventListener('mouseup', () => {
-    isMouseDown = false; // Stop scrolling after mouse release
-    isManualScrolling = false; // Reset manual scroll flag
-    content.classList.add("scrolling"); // Re-enable automatic scrolling
+  container.addEventListener("mouseup", () => {
+    isMouseDown = false;
+    setTimeout(resumeAutoScrolling, 500); // Resume after delay
   });
 
-  // Ensure the scroll position is always adjustable when scrolling manually
-  container.addEventListener('wheel', () => {
-    if (!isManualScrolling) {
-      content.classList.remove("scrolling"); // Pause automatic scrolling if user uses wheel
-    }
+  // Handle wheel events (desktop)
+  container.addEventListener("wheel", () => {
+    stopAutoScrolling();
+    setTimeout(resumeAutoScrolling, 500); // Resume after delay
   });
 
-  // Automatically restart the scrolling after a brief pause if manual scrolling has stopped
-  let timeout;
-  container.addEventListener('scroll', () => {
-    if (timeout) clearTimeout(timeout);
-    timeout = setTimeout(() => {
-      if (!isManualScrolling) {
-        content.classList.add("scrolling"); // Re-enable automatic scrolling
+  // Handle scroll events to track manual interactions
+  let scrollTimeout;
+  container.addEventListener("scroll", () => {
+    stopAutoScrolling();
+    if (scrollTimeout) clearTimeout(scrollTimeout);
+
+    scrollTimeout = setTimeout(() => {
+      if (!isMouseDown && !isManualScrolling) {
+        resumeAutoScrolling();
       }
-    }, 200); // Allow automatic scrolling to resume after 200ms of no manual scroll
+    }, 300); // Slight delay before resuming auto-scroll
   });
 });
-
-
-
-
-
-
