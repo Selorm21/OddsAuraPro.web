@@ -259,6 +259,7 @@
 th:nth-child(1), td:nth-child(1) {
   width: 2%; /* Set a specific width for the results column */
   text-align: center; /* Optional: Align content to the center */
+  font-weight: bold;
 }
 
 /* Target the 'leagues' column */
