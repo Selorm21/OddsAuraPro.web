@@ -1,63 +1,8 @@
 
-
-
-
-
-
-.time-date-bar {
-  background-color: #FFD700; 
-  color: #202833;
-  text-align: center;
-  padding: 10px;
-  font-family: Arial, sans-serif;
-  font-size: 18px;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow */
-  z-index: 1000; /* Ensure it appears on top of other content */
-  word-wrap: break-word; /* Handle long content gracefully */
-  border-bottom: 2px solid #202833;
-  transition: all 0.5s ease; /* Smooth transitions for responsive changes */
-}
-
-/* Media query for smaller screens (e.g., phones) */
-@media (max-width: 768px) {
-  .time-date-bar {
-    font-size: 16px; /* Slightly smaller font for smaller screens */
-    padding: 8px; /* Reduce padding to save space */
-  }
-}
-
-/* Media query for very small screens (e.g., old phones, < 480px) */
-@media (max-width: 480px) {
-  .time-date-bar {
-    font-size: 14px; /* Smaller font for very small screens */
-    padding: 6px; /* Further reduce padding */
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* General Styles for Desktop and Larger Screens */
 .header {
   display: grid;
-  grid-template-columns: 150px 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   background-color: #202833;
   font-family: 'Cinzel', serif;
   padding-top: 0;
@@ -147,7 +92,7 @@
   flex-direction: row;
 }
 
-.about, .vip,  .academy {
+.about, .vip, .contact, .academy {
   background-color: #202833;
   color: white;
   padding: 5px 10px;
@@ -158,8 +103,8 @@
   transition: background-color 0.3s ease;
 }
 
-
 .contact {
+  margin-bottom: 10px;
   background-color: #202833;
   color: white;
   padding: 5px 10px;
@@ -168,7 +113,10 @@
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-bottom: 10px;
+}
+
+.contact {
+  padding-bottom: 10px;
 }
 
 .about:hover,
@@ -296,3 +244,85 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#betting-strategies {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#betting-strategies h2 {
+  color: #2C3E50;
+  font-size: 28px;
+  border-bottom: 2px solid #BDC3C7;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+#betting-strategies h3 {
+  color: #34495E;
+  font-size: 22px;
+  margin-top: 20px;
+}
+
+#betting-strategies p {
+  color: #7F8C8D;
+  line-height: 1.6;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+#betting-strategies a {
+  color: #3498DB;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#betting-strategies a:hover {
+  text-decoration: underline;
+}
+
+#betting-strategies ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+#betting-strategies li {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  #betting-strategies {
+      margin: 10px;
+      padding: 15px;
+  }
+
+  #betting-strategies h2 {
+      font-size: 24px;
+  }
+
+  #betting-strategies h3 {
+      font-size: 20px;
+  }
+
+  #betting-strategies p {
+      font-size: 14px;
+  }
+}

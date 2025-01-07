@@ -32,24 +32,6 @@ document.querySelector('.contact').addEventListener('click', function () {
 
 
 
-  // ABOUT LINKED 
-  document.querySelector('.about').addEventListener('click', function () {
-    window.location.href = 'about.html'; // Replace 'about.html' with the relative or absolute path to your page.
-    }
-  );
-
-
-
-
-
-   // ACADEMY LINKED 
-   document.querySelector('.academy').addEventListener('click', function () {
-    window.location.href = 'bettingAcademy.html'; // Replace 'about.html' with the relative or absolute path to your page.
-    }
-  );
-
-
-
 
 
 // HOMEBUTTON LINKED 

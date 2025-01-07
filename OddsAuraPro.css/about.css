@@ -1,41 +1,47 @@
-
-
-
-
-
-
-.time-date-bar {
-  background-color: #FFD700; 
-  color: #202833;
-  text-align: center;
-  padding: 10px;
+#about {
+  padding: 40px 0;
+  background-color: #f4f4f4;
   font-family: Arial, sans-serif;
+}
+
+#about .container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1200px;
+  text-align: center;
+}
+
+#about h2 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#about h3 {
+  font-size: 28px;
+  color: #444;
+  margin-top: 30px;
+}
+
+#about p {
   font-size: 18px;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow */
-  z-index: 1000; /* Ensure it appears on top of other content */
-  word-wrap: break-word; /* Handle long content gracefully */
-  border-bottom: 2px solid #202833;
-  transition: all 0.5s ease; /* Smooth transitions for responsive changes */
+  color: #555;
+  line-height: 1.6;
 }
 
-/* Media query for smaller screens (e.g., phones) */
-@media (max-width: 768px) {
-  .time-date-bar {
-    font-size: 16px; /* Slightly smaller font for smaller screens */
-    padding: 8px; /* Reduce padding to save space */
-  }
+#about ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-/* Media query for very small screens (e.g., old phones, < 480px) */
-@media (max-width: 480px) {
-  .time-date-bar {
-    font-size: 14px; /* Smaller font for very small screens */
-    padding: 6px; /* Further reduce padding */
-  }
+#about ul li {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+#about ul li strong {
+  color: #000;
 }
 
 
@@ -57,7 +63,7 @@
 /* General Styles for Desktop and Larger Screens */
 .header {
   display: grid;
-  grid-template-columns: 150px 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   background-color: #202833;
   font-family: 'Cinzel', serif;
   padding-top: 0;
@@ -158,9 +164,9 @@
   transition: background-color 0.3s ease;
 }
 
-
 .contact {
-  background-color: #202833;
+ margin-bottom: 10px;
+ background-color: #202833;
   color: white;
   padding: 5px 10px;
   border: none;
@@ -168,7 +174,6 @@
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-bottom: 10px;
 }
 
 .about:hover,
@@ -290,9 +295,3 @@
     margin-left: auto; /* Push the menu to the right */
   }
 }
-
-
-
-
-
-
