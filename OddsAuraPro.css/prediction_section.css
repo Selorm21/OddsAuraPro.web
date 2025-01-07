@@ -272,14 +272,16 @@ th:nth-child(2), td:nth-child(2) {
 th:nth-child(3), td:nth-child(3) {
   width: 31%; /* Set a specific width for the results column */
   text-align: center; /* Optional: Align content to the center */
+  font-weight: bold;
 }
 
 
 
 /* Target the 'tips' column */
 th:nth-child(4), td:nth-child(4) {
-  width: 41%; /* Set a specific width for the results column */
+  width: 40%; /* Set a specific width for the results column */
   text-align: center; /* Optional: Align content to the center */
+  font-weight: bold;
 }
 
 
