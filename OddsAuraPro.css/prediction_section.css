@@ -306,6 +306,45 @@ th:nth-child(5), td:nth-child(5) {
     .numbered-table {
       font-size: 0.9rem;
     }
+    
+/* Target the '#' column */
+th:nth-child(1), td:nth-child(1) {
+  width: 2%; /* Set a specific width for the results column */
+  text-align: center; /* Optional: Align content to the center */
+  font-weight: bold;
+}
+
+/* Target the 'leagues' column */
+th:nth-child(2), td:nth-child(2) {
+  width: 20%; /* Set a specific width for the results column */
+  text-align: center; /* Optional: Align content to the center */
+}
+
+
+/* Target the 'teams' column */
+th:nth-child(3), td:nth-child(3) {
+  width: 31%; /* Set a specific width for the results column */
+  text-align: center; /* Optional: Align content to the center */
+  font-weight: bold;
+}
+
+
+
+/* Target the 'tips' column */
+th:nth-child(4), td:nth-child(4) {
+  width: 40%; /* Set a specific width for the results column */
+  text-align: center; /* Optional: Align content to the center */
+  font-weight: bold;
+}
+
+
+
+/* Target the 'RESULTS' column */
+th:nth-child(5), td:nth-child(5) {
+  width: 2%; /* Set a specific width for the results column */
+  text-align: center; /* Optional: Align content to the center */
+}
+
   }
 
   @media (max-width: 992px) {
@@ -322,6 +361,45 @@ th:nth-child(5), td:nth-child(5) {
     .numbered-table td {
       padding: 6px; /* Reduce padding for smaller screens */
     }
+    
+/* Target the '#' column */
+th:nth-child(1), td:nth-child(1) {
+  width: 2%; /* Set a specific width for the results column */
+  text-align: center; /* Optional: Align content to the center */
+  font-weight: bold;
+}
+
+/* Target the 'leagues' column */
+th:nth-child(2), td:nth-child(2) {
+  width: 20%; /* Set a specific width for the results column */
+  text-align: center; /* Optional: Align content to the center */
+}
+
+
+/* Target the 'teams' column */
+th:nth-child(3), td:nth-child(3) {
+  width: 31%; /* Set a specific width for the results column */
+  text-align: center; /* Optional: Align content to the center */
+  font-weight: bold;
+}
+
+
+
+/* Target the 'tips' column */
+th:nth-child(4), td:nth-child(4) {
+  width: 40%; /* Set a specific width for the results column */
+  text-align: center; /* Optional: Align content to the center */
+  font-weight: bold;
+}
+
+
+
+/* Target the 'RESULTS' column */
+th:nth-child(5), td:nth-child(5) {
+  width: 2%; /* Set a specific width for the results column */
+  text-align: center; /* Optional: Align content to the center */
+}
+
   }
 
   @media (max-width: 576px) {  
@@ -332,6 +410,46 @@ th:nth-child(5), td:nth-child(5) {
     .numbered-table td {
       padding: 4px; /* Further reduce padding for extra small screens */
     }
+    
+/* Target the '#' column */
+th:nth-child(1), td:nth-child(1) {
+  width: 2%; /* Set a specific width for the results column */
+  text-align: center; /* Optional: Align content to the center */
+  font-weight: bold;
+}
+
+/* Target the 'leagues' column */
+th:nth-child(2), td:nth-child(2) {
+  width: 20%; /* Set a specific width for the results column */
+  text-align: center; /* Optional: Align content to the center */
+}
+
+
+/* Target the 'teams' column */
+th:nth-child(3), td:nth-child(3) {
+  width: 31%; /* Set a specific width for the results column */
+  text-align: center; /* Optional: Align content to the center */
+  font-weight: bold;
+}
+
+
+
+/* Target the 'tips' column */
+th:nth-child(4), td:nth-child(4) {
+  width: 40%; /* Set a specific width for the results column */
+  text-align: center; /* Optional: Align content to the center */
+  font-weight: bold;
+}
+
+
+
+/* Target the 'RESULTS' column */
+th:nth-child(5), td:nth-child(5) {
+  width: 2%; /* Set a specific width for the results column */
+  text-align: center; /* Optional: Align content to the center */
+}
+
+    
    
   }
 
