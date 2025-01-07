@@ -38,16 +38,10 @@
   padding: 0; /* Remove any padding */
 }
 
-
-
-
-
-
-
 /* Slideshow container */
 .slideshow-container {
   position: relative;
-  width: 40%; /* Base width for larger screens */
+  width: 47%; /* Base width for larger screens */
   height: 100%; /* Ensure height fills the container */
   margin: auto;
   overflow: hidden;
@@ -62,7 +56,7 @@
 
 .slide img {
   width: 100%; /* Ensure the image width is responsive */
-  height: 95%;
+  height: 100%;
   object-fit: cover; /* Maintain image aspect ratio while covering the container */
 }
 
@@ -149,6 +143,13 @@
     margin: 15px auto;
   }
 
+  .slide img {
+    width: 100%; /* Set the width to fill the container */
+    height: auto; /* Maintain aspect ratio initially */
+    aspect-ratio: 1 / 1; /* Force a square aspect ratio */
+    object-fit: cover; /* Ensure the image fills the square area */
+  }
+
   .prev, .next {
     font-size: 18px; /* Further reduce arrow size */
   }
@@ -171,6 +172,13 @@
     margin: 10px auto;
   }
 
+  .slide img {
+    width: 100%; /* Set the width to fill the container */
+    height: auto; /* Maintain aspect ratio initially */
+    aspect-ratio: 1 / 1; /* Force a square aspect ratio */
+    object-fit: cover; /* Ensure the image fills the square area */
+  }
+
   .prev, .next {
     font-size: 16px; /* Smaller arrow size */
     padding: 8px;
@@ -181,9 +189,6 @@
     height: 6px;
   }
 }
-
-
-
 
 
 
@@ -213,7 +218,7 @@
   display: flex;
   flex-direction: column;
   transform: translateY(0);
-  animation: scroll-up 40s linear infinite; /* Automatic scroll by default */
+  animation: scroll-up 60s linear infinite; /* Automatic scroll by default */
 }
 
 p {
@@ -270,7 +275,7 @@ li {
   }
 
   .bet-responsibly-content {
-    animation: scroll-up 30s linear infinite; /* Keep animation active */
+    animation: scroll-up 60s linear infinite; /* Keep animation active */
   }
 
   /* Adjust font sizes for better readability */
@@ -297,7 +302,7 @@ li {
   }
 
   .bet-responsibly-content {
-    animation: scroll-up 35s linear infinite;
+    animation: scroll-up 60s linear infinite;
   }
 }
 
@@ -308,7 +313,7 @@ li {
   }
 
   .bet-responsibly-content {
-    animation: scroll-up 40s linear infinite;
+    animation: scroll-up 60s linear infinite;
   }
 }
 

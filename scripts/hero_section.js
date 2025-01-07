@@ -37,7 +37,7 @@ function showSlide(n) {
 function startAutoSlide() {
   autoSlideInterval = setInterval(() => {
     changeSlide(1); // Move to the next slide
-  }, 5000); // Adjust the interval time as needed (5000ms = 5 seconds)
+  }, 6000); // Adjust the interval time as needed (5000ms = 5 seconds)
 }
 
 function stopAutoSlide() {
