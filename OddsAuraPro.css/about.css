@@ -1,30 +1,30 @@
 #about {
-  padding: 40px 0;
+  padding: 40px 5%; /* Use percentage for padding to make it flexible */
   background-color: #f4f4f4;
   font-family: Arial, sans-serif;
 }
 
 #about .container {
-  width: 80%;
+  width: 90%; /* Adjust width for smaller screens */
   margin: 0 auto;
   max-width: 1200px;
   text-align: center;
 }
 
 #about h2 {
-  font-size: 36px;
+  font-size: 2.5rem; /* Use relative units for font sizes */
   color: #333;
   margin-bottom: 20px;
 }
 
 #about h3 {
-  font-size: 28px;
+  font-size: 2rem;
   color: #444;
   margin-top: 30px;
 }
 
 #about p {
-  font-size: 18px;
+  font-size: 1rem;
   color: #555;
   line-height: 1.6;
 }
@@ -35,13 +35,50 @@
 }
 
 #about ul li {
-  font-size: 18px;
+  font-size: 1rem;
   color: #555;
   margin-bottom: 10px;
 }
 
 #about ul li strong {
   color: #000;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  #about {
+    padding: 30px 3%;
+  }
+
+  #about h2 {
+    font-size: 2rem;
+  }
+
+  #about h3 {
+    font-size: 1.5rem;
+  }
+
+  #about p, #about ul li {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #about {
+    padding: 20px 2%;
+  }
+
+  #about h2 {
+    font-size: 1.5rem;
+  }
+
+  #about h3 {
+    font-size: 1.2rem;
+  }
+
+  #about p, #about ul li {
+    font-size: 0.8rem;
+  }
 }
 
 
