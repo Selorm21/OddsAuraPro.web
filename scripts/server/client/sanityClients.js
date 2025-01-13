@@ -36,6 +36,7 @@ fetch(url, {
   .then((response) => response.json())
   .then((data) => {
     const result = data.result
+    console.log(result)
 
     // Update bet container title and copy section
     document.querySelector('.betContainer h1').innerHTML = `
