@@ -1,4 +1,3 @@
-
 // COUNTER
 document.addEventListener("DOMContentLoaded", function () {
   const counters = document.querySelectorAll(".figure"); // Select all figure elements
@@ -9,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const animateCounter = (entry) => {
     if (entry.isIntersecting) {
       const counter = entry.target;
-      const targetValue = parseInt(counter.textContent.replace(/,/g, ''), 10); // Parse the target value
+      const targetValue = parseInt(counter.textContent.replace(/,/g, ""), 10); // Parse the target value
       let currentValue = 0;
 
       const updateCounter = () => {
