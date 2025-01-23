@@ -1,16 +1,10 @@
 import {defineType, defineArrayMember} from 'sanity'
 
 export default defineType({
-  name: 'header',
+  name: 'predictC',
   type: 'document',
-  title: 'Header Section',
+  title: 'Precdiction C',
   fields: [
-    {
-      name: 'headText',
-      type: 'string',
-      title: 'Header Text',
-      validation: (Rule) => Rule.required().max(100).warning('Header text should be concise'),
-    },
     {
       name: 'betContainerTitle',
       type: 'string',
