@@ -88,3 +88,35 @@ function copyToClipboard(copyTextId, copyMessageId) {
 
 
 
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const popup = document.getElementById("imagePopup");
+  const closePopup = document.getElementById("closePopup");
+
+  // Show popup after 7 seconds
+  setTimeout(() => {
+    popup.classList.remove("hidden");
+  }, 7000);
+
+  // Close the popup when the close button is clicked
+  closePopup.addEventListener("click", () => {
+    popup.classList.add("hidden");
+  });
+
+  // Close the popup when clicking outside the popup content
+  popup.addEventListener("click", (e) => {
+    if (e.target === popup) {
+      popup.classList.add("hidden");
+    }
+  });
+});
+
+
+
+

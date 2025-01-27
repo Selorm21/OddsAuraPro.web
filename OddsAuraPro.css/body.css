@@ -8,5 +8,72 @@
     margin: 0;  /* Remove default margin */
     padding: 0;  /* Remove default padding */
     height: 100%; /* Ensure the body and HTML take up the full height */
+    /* overflow: hidden; */
+  }
+
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent; /* Transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .popup-content {
+    background: rgba(0, 0, 0, 0.8); /* Dark background for the content */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    max-width: 90%; /* Maximum width relative to the screen */
+    max-height: 90%; /* Maximum height relative to the screen */
     overflow: hidden;
   }
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fff;
+  }
+
+  img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+  }
+
+
+  
+  /* Media Query for larger screens */
+  @media (min-width: 768px) {
+    .popup-content {
+      max-width: 600px; /* Limit the size for larger screens */
+    }
+  }
+
+
+
+
+
+
+
+
+
+  
+ 
+
+
+ 
