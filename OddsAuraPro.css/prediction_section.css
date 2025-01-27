@@ -658,11 +658,7 @@ th:nth-child(5), td:nth-child(5) {
   }
 
 
-  .readonly-checkbox:checked {
-    background-color: green; /* Green when checked */
-    border-color: green; /* Optional: Change the border color to match */
-  }
-
+ 
 
 
 
