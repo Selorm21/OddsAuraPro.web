@@ -110,7 +110,7 @@
 }
 
 /* Specific icon styles */
-.fa-snapchat, .fa-twitter, .fa-youtube, .fa-instagram {
+.fa-tiktok, .fa-twitter, .fa-youtube, .fa-instagram {
   display: inline-block;
   background: #383838;
   color: #ccc;
@@ -125,8 +125,11 @@
   transition: all 0.3s ease-in;
 }
 
-.fa-snapchat:hover {
-  background-color: #FFFC00;
+
+.fa-tiktok:hover {
+  /* background-color: #FFFC00; */
+  text-shadow: 15px 15px #ff3353fc,
+  -15px -15px cyan;
 }
 
 .fa-twitter:hover {
