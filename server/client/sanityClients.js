@@ -140,7 +140,7 @@ fetch(urlB, {
     `
 
     // Populate table rows
-    const tableBody = document.querySelector('.predictB')
+    const tableBody = document.querySelector('.numbered-table.predictB tbody')
     tableBody.innerHTML = result.tableRows
       .map(
         (row, index) => `
@@ -196,7 +196,7 @@ fetch(urlC, {
       `
 
     // Populate table rows
-    const tableBody = document.querySelector('.predictC')
+    const tableBody = document.querySelector('.numbered-table.predictC tbody')
     tableBody.innerHTML = result.tableRows
       .map(
         (row, index) => `
@@ -252,7 +252,7 @@ fetch(urlD, {
     `
 
     // Populate table rows
-    const tableBody = document.querySelector('.predictD')
+    const tableBody = document.querySelector('.numbered-table.predictD tbody')
     tableBody.innerHTML = result.tableRows
       .map(
         (row, index) => `

@@ -229,6 +229,7 @@
 /* Adjust payment image properties */
 .paymentimage {
   height: 20px;
+  width: auto;
   margin-top: 10px;
   display: inline-block;  /* Ensures it stays inline */
 }
