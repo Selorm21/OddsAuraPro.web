@@ -140,7 +140,7 @@ fetch(urlB, {
     `
 
     // Populate table rows
-    const tableBody = document.querySelector('.numbered-table tbody')
+    const tableBody = document.querySelector('.predictB')
     tableBody.innerHTML = result.tableRows
       .map(
         (row, index) => `
