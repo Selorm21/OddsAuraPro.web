@@ -92,9 +92,6 @@ function copyToClipboard(copyTextId, copyMessageId) {
 
 
 
-
-
-
 document.addEventListener("DOMContentLoaded", () => {
   const popup = document.getElementById("imagePopup");
   const closePopup = document.getElementById("closePopup");
@@ -116,11 +113,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-
-
-
-
-
-
-
-

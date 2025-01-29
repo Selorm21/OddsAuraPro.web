@@ -509,6 +509,8 @@ th:nth-child(5), td:nth-child(5) {
 
 
 
+
+
 /* Rollover section styles */
 .rolloversection {
   display: inline-block;
@@ -656,9 +658,6 @@ th:nth-child(5), td:nth-child(5) {
     width: 10px; /* Set a specific width for the Result column */
     text-align: center; /* Optional: Center align the checkbox */
   }
-
-
- 
 
 
 
